@@ -8,7 +8,7 @@ Mujeeb - Twitter API Integration
 
 Abdi - Flickr API Integration
 
-Jack - 
+Jack - Document the code and system
 
 Mo - 
 
