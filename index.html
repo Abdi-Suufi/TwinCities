@@ -1,57 +1,26 @@
 <!DOCTYPE html>
+<html>
 <link rel="stylesheet" href="styles.css">
 
-<html>
-<body>
-    <header>Twin Cities</header>
-    <h1> Manchester | Wuhan
-    </h1>
-    <h2> Welcome to the home page of our group project in relation to the Twin Cities of Manchester and Wuhan.</h2>
-    <img src="https://www.centreforcities.org/wp-content/uploads/2014/08/Manchester_x1650-1630x899.jpg" alt="Manchester" width="810" height="450" img align="left" frameborder="0">
-    <img src="https://www.asiapacific.ca/sites/default/files/styles/apf_social/public/Keystone_57.png?itok=36S2DmGi" alt="Wuhan" width="810" height="450" img align="right">
+<head>
+  <title>Twin Cities: Manchester and Wuhan</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpHvJ3OmlFeu3pJ3kcGMlR1860aQSepLo"></script>
+  <script src="map.js"></script>
+</head>
+
+<body onload="initMap()">
+  <h1>Twin Cities: Manchester and Wuhan</h1>
+  <h2>Manchester, England</h2>
+  <p>Manchester is a major city in the northwest of England with a rich industrial heritage. The Castlefield conservation area’s 
+    18th-century canal system recalls the city’s days as a textile powerhouse, and visitors can trace this history at the intera
+    ctive Museum of Science & Industry. The revitalised Salford Quays dockyards now house the Daniel Libeskind-designed Imperial
+     War Museum North and the Lowry cultural centre.</p>
+  <div id="manchesterMap"></div>
+  <h2>Wuhan, China</h2>
+  <p>Wuhan, the sprawling capital of Central China’s Hubei province, is a commercial center divided by the Yangtze and Han rivers. The city contains many lakes and parks, 
+    including expansive, picturesque East Lake. Nearby, the Hubei Provincial Museum displays relics from the Warring States period, including the Marquis Yi of Zeng’s coff
+    in and bronze musical bells from his 5th-century B.C. tomb.</p>
+  <div id="wuhanMap"></div>
 </body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
