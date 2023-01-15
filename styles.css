@@ -24,3 +24,12 @@ h1,h2 {
 p {
   background-color: white;
 }
+
+h3 {
+  color: blue;
+}
+
+#infowindowimg {
+  width: 120px;
+  height: 50px;
+}

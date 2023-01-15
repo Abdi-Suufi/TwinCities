@@ -12,13 +12,21 @@ function initMap() {
     streetViewControl: false,
     zoomControl: false
   });
-  
+
   //Creating custom markers on the google map
   var manchesterpoint = new google.maps.Marker({
     position: manchester,
     map: map1,
     title: "Manchester",
     animation: google.maps.Animation.DROP
+  });
+
+  const manchesterpointinfo = new google.maps.InfoWindow ({
+    content: '<h3>Flicker API and Twitter<br> API  can probably go here</h3> <img id="infowindowimg" src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/40000/40504-Albert-Square.jpg"> '
+  })
+
+  google.maps.event.addListener(manchesterpoint, "click", function () { //Adds marker to map
+    manchesterpointinfo.open(map1, manchesterpoint);
   });
 
   const marker1 = new google.maps.Marker({
@@ -44,12 +52,13 @@ function initMap() {
   })
 
   const infowindow2 = new google.maps.InfoWindow({
-    content: "Needs updating",
+    content: '<h3>test test test</h3> <img id="infowindowimg" src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/40000/40504-Albert-Square.jpg"> ',
+    
   });
 
   google.maps.event.addListener(marker2, "click", function () { //Adds marker to map
-    infowindow2.open(map1, marker2);
-  });
+      infowindow2.open(map1, marker2);
+    });
 
   // Wuhan Map
   var wuhan = { lat: 30.583332, lng: 114.283333 };
@@ -85,7 +94,7 @@ function initMap() {
   });
 
   const marker4 = new google.maps.Marker({
-    position: {lat: 30.56469311711552, lng: 114.32984612537149},
+    position: { lat: 30.56469311711552, lng: 114.32984612537149 },
     map: map2,
     title: "Click for more information",
     animation: google.maps.Animation.DROP
