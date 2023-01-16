@@ -15,12 +15,17 @@
     18th-century canal system recalls the city’s days as a textile powerhouse, and visitors can trace this history at the intera
     ctive Museum of Science & Industry. The revitalised Salford Quays dockyards now house the Daniel Libeskind-designed Imperial
      War Museum North and the Lowry cultural centre.</p>
-  <div id="manchesterMap"></div>
+  <div id='manchesterMap'></div>
   <h2>Wuhan, China</h2>
   <p>Wuhan, the sprawling capital of Central China’s Hubei province, is a commercial center divided by the Yangtze and Han rivers. The city contains many lakes and parks, 
     including expansive, picturesque East Lake. Nearby, the Hubei Provincial Museum displays relics from the Warring States period, including the Marquis Yi of Zeng’s coff
     in and bronze musical bells from his 5th-century B.C. tomb.</p>
   <div id="wuhanMap"></div>
 </body>
+<script>
+  const FlickrapiKey = "3cb96aaa4b49a42b1f147d5bfcf4d9e2";
+  fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FlickrapiKey}&tags=manchester&format=json&nojsoncallback=1`)
+  fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FlickrapiKey}&tags=Wuhan&format=json&nojsoncallback=1`)
+</script>
 
 </html>

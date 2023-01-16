@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   background-color: lightgrey;
 }
 
@@ -22,14 +22,16 @@ h1,h2 {
 }
 
 p {
-  background-color: white;
+  background-color: lightgrey;
 }
 
 h3 {
   color: blue;
+  text-align: center;
+}
+#manchestermarker img, #infomarkerpic1 img, #infomarkerpic2 img, #wuhanmarker img, #infomarkerpic3 img, #infomarkerpic4 img{
+  width: 76px;
+  height: auto;
 }
 
-#infowindowimg {
-  width: 120px;
-  height: 50px;
-}
+
