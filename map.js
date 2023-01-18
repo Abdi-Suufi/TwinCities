@@ -20,7 +20,7 @@ function initMap() {
 
   });
 
-  const manchesterpointinfo = new google.maps.InfoWindow({
+  const manchesterpointinfo = new google.maps.InfoWindow({ //Opens mini window when clicking on marker
     content: "<h3>Twitter API Insert</h3> <div id='manchestermarker'></div>",
 
   })
@@ -40,7 +40,7 @@ function initMap() {
     content: "<h3>ManCity Stadium</h3><div id='infomarkerpic1'>",
   });
 
-  google.maps.event.addListener(marker1, "click", function () { //Adds marker to map
+  google.maps.event.addListener(marker1, "click", function () { 
     infowindow1.open(map1, marker1);
   });
 
@@ -56,7 +56,7 @@ function initMap() {
 
   });
 
-  google.maps.event.addListener(marker2, "click", function () { //Adds marker to map
+  google.maps.event.addListener(marker2, "click", function () { 
     infowindow2.open(map1, marker2);
   });
 
