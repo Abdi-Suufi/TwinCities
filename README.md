@@ -6,7 +6,7 @@ Group task on twincities for both manchester and wuhan
 
 Mujeeb - Twitter API Integration
 
-Abdi - Flickr API Integration
+Abdi - Flickr API Integration ✓
 
 Jack - Document the code and system
 
