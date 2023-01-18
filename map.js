@@ -174,13 +174,13 @@ function initMap() {
   });
   
   //center wuhan marker
-  fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FlickrapiKey}&tags=Wuhan&format=json&nojsoncallback=1`)
+  fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FlickrapiKey}&tags=china&format=json&nojsoncallback=1`) //Tags search for china rather than the city wuhan due to covid pics lol
     .then(response => response.json())
     .then(data => {
       // Get the wuhan photos container
       const manchesterPhotosContainer = document.getElementById("wuhanmarker");
       // Gets a single photo
-      fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FlickrapiKey}&tags=Wuhan&format=json&nojsoncallback=1`)
+      fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FlickrapiKey}&tags=china&format=json&nojsoncallback=1`)
         .then(response => response.json())
         .then(data => {
           const manchesterPhotosContainer = document.getElementById("wuhanmarker");
