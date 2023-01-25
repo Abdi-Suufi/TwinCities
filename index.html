@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="styles.css">
 
 <head>
+  <script src="config.js"></script>
   <title>Twin Cities: Manchester and Wuhan</title>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpHvJ3OmlFeu3pJ3kcGMlR1860aQSepLo"></script>
   <script src="map.js"></script>
@@ -24,8 +25,8 @@
 </body>
 <script>
   const FlickrapiKey = "3cb96aaa4b49a42b1f147d5bfcf4d9e2";
-  fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FlickrapiKey}&tags=manchester&format=json&nojsoncallback=1`)
-  fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FlickrapiKey}&tags=Wuhan&format=json&nojsoncallback=1`)
+  fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${config.flickrApiKey}&tags=manchester&format=json&nojsoncallback=1`)
+  fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${config.flickrApiKey}&tags=Wuhan&format=json&nojsoncallback=1`)
 </script>
 
 </html>
