@@ -172,9 +172,13 @@ function initMap() {
         .then(data => {
           const manchesterPhotosContainer = document.getElementById("infomarkerpic3");
           const photo = data.photos.photo[0];
-          const img = document.createElement("img");
-          img.src = `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`;
-          manchesterPhotosContainer.appendChild(img);
+          if (photo && photo.farm) {
+            const img = document.createElement("img");
+            img.src = `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`;
+            manchesterPhotosContainer.appendChild(img);
+          } else {
+            console.error("Error: idk how to fix this");
+          }
         })
         
     })
