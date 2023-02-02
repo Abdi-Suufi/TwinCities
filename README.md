@@ -1,14 +1,14 @@
 # TwinCities
 
-Group task on twincities for both manchester and wuhan
+Group Task Comparing The Two Cities of Manchester and Wuhan.
 
 ## Individual Tasks:
 
-Mujeeb - Twitter API Integration
+Mujeebur Alshamsi - Refactor The Front-End to be Responsive
 
-Abdi - Flickr API Integration ✓
+Abdi Suufi - Build and Integrate a Photo Widget (Flickr API) ✓
 
-Jack - Document the code and system
+Jack Davey - Use & Document a Test Framework
 
-Mo - 
+Muhammad Shayan - Document The Code and System
 
