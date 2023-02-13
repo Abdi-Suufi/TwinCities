@@ -1,13 +1,17 @@
-body {
+body { 
+  <!-- setting the font and background colour-->
   font-family: Arial;
   background-color: lightgrey;
 }
 
 h1,h2 {
+  <!-- text alligned to centre -->
   text-align: center;
 }
 
+
 #manchesterMap {
+  <!-- setting the width and height of the Manchester map and along side gray border-->
   margin: 0 auto;
   width: 500px;
   height: 300px;
@@ -15,6 +19,8 @@ h1,h2 {
 }
 
 #wuhanMap {
+  <!-- setting the width and height of the wuhan map and along side gray border-->
+  
   margin: 0 auto;
   width: 500px;
   height: 300px;
@@ -22,10 +28,12 @@ h1,h2 {
 }
 
 p {
+  <!-- setting the background to gray-->
   background-color: lightgrey;
 }
 
-h3 {
+{
+  <!-- colour set to -->
   color: blue;
   text-align: center;
 }
