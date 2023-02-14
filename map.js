@@ -1,110 +1,90 @@
 function initMap() {
   // Manchester Map
-  var manchester = { lat: 53.483959, lng: -2.244644 };
-
-  var map1 = new google.maps.Map(document.getElementById('manchesterMap'), {
+  const manchester = { lat: 53.483959, lng: -2.244644 };
+  const mapOptions = {
     zoom: 12,
     center: manchester,
-    mapTypeControl: false, //Gets rid of unnecessary stuff on the map
+    mapTypeControl: false,
     fullscreenControl: false,
     streetViewControl: false,
-    zoomControl: false
-  });
+    zoomControl: false,
+  };
+
+  const wuhan = { lat: 30.583332, lng: 114.283333 };
+  const mapOptions2 = {
+    zoom: 12,
+    center: wuhan,
+    mapTypeControl: false,
+    fullscreenControl: false,
+    streetViewControl: false,
+    zoomControl: false,
+  };
+  const map = new google.maps.Map(document.getElementById('manchesterMap'), mapOptions);
+  const map2 = new google.maps.Map(document.getElementById('wuhanMap'), mapOptions2)
 
   //Creating custom markers on the google map
-  var manchesterpoint = new google.maps.Marker({
+  const manchesterpoint = new google.maps.Marker({
     position: manchester,
-    map: map1,
+    map: map,
     title: "Manchester",
     animation: google.maps.Animation.DROP
-
   });
 
+  const wuhanpoint = new google.maps.Marker({
+    position: wuhan,
+    map: map2,
+    title: "Wuhan",
+    animation: google.maps.Animation.DROP
+  });
+
+
+  const createMarker = (lat, lng, map, title, content) => {
+    const marker = new google.maps.Marker({
+      position: { lat, lng },
+      map: map,
+      title: title,
+      animation: google.maps.Animation.DROP
+    });
+
+    const infowindow = new google.maps.InfoWindow({
+      content: content
+    });
+
+    google.maps.event.addListener(marker, "click", function () {
+      infowindow.open(map, marker);
+    });
+  };
+  
+  createMarker(53.482888198445494, -2.2004014365317137, map, "Click for more information", "<h3>ManCity Stadium</h3><div id='infomarkerpic1'></div>");
+  createMarker(53.47242932425202, -2.325088007881245, map, "Click for more information", "<h3>TraffordPark</h3><div id='infomarkerpic2'></div>");
+  createMarker(53.46314742885288, -2.2913944951260934, map, "Click for more information", "<h3>TraffordStadium</h3><div id='infomarkerpic3'></div>");
+  createMarker(53.466916686501506, -2.2339445236776556, map, "Click for more information", "<h3>ManchesterUnviersity</h3><div id='infomarkerpic4'></div>")
+  createMarker(53.50292324891882, -2.2337384007642465, map, "Click for more information", "<h3>Museum of Transport</h3><div id='infomarkerpic5'></div>")
+  
   const manchestercenterpointinfo = new google.maps.InfoWindow({ //Opens mini window when clicking on marker
     content: "<h3>Twitter API Insert</h3> <div id='manchestermarker'></div>", //idk how to id all pics the same without the pictures being tailored to the same filtered image
 
   })
 
   google.maps.event.addListener(manchesterpoint, "click", function () { //Adds marker to map
-    manchestercenterpointinfo.open(map1, manchesterpoint);
+    manchestercenterpointinfo.open(map, manchesterpoint);
   });
 
-  const marker1 = new google.maps.Marker({
-    position: { lat: 53.482888198445494, lng: -2.2004014365317137 },
-    map: map1,
-    title: "Click for more information",
-    animation: google.maps.Animation.DROP
+  createMarker(30.607516958985308, 114.2995129047251, map2, "Click for more information", "<h3>Jiefang Park</h3> <div id='infomarkerpic6'></div>")
+  createMarker(30.58553766638162, 114.27121616405233, map2, "Click for more information", "<h3>Zhongshan Park</h3> <div id='infomarkerpic7'></div>" )
+  createMarker(30.6117019090396, 114.24900072516074, map2, "Click for more information", "<h3>Technology Building</h3> <div id='infomarkerpic8'></div>")
+  createMarker(30.567503767406887, 114.29131920092927, map2, "Click for more information", "<h3>Longwang Pavilion</h3> <div id='infomarkerpic9'></div>")
+  createMarker(30.591238272616856, 114.24302459419809, map2, "Click for more information", "<h3>Mengzehu Park</h3> <div id='infomarkerpic10'></div>")
+ 
+  
+  const wuhanpointinfo = new google.maps.InfoWindow({
+    content: "<h3>Wuhan</h3> <div id='wuhanmarker'></div>",
+
   })
-
-  const infowindow1 = new google.maps.InfoWindow({
-    content: "<h3>ManCity Stadium</h3><div id='infomarkerpic1'>", 
+  google.maps.event.addListener(wuhanpoint, "click", function () { //Adds marker to map
+    wuhanpointinfo.open(map2, wuhanpoint);
   });
 
-  google.maps.event.addListener(marker1, "click", function () { 
-    infowindow1.open(map1, marker1);
-  });
-
-  const marker2 = new google.maps.Marker({
-    position: { lat: 53.47242932425202, lng: -2.325088007881245 },
-    map: map1,
-    title: "Click for more information",
-    animation: google.maps.Animation.DROP
-  })
-
-  const infowindow2 = new google.maps.InfoWindow({
-    content: "<h3>TraffordPark</h3><div id='infomarkerpic2'></div>",
-  });
-
-  google.maps.event.addListener(marker2, "click", function () { 
-    infowindow2.open(map1, marker2);
-  });
-
-  const marker3 = new google.maps.Marker({
-    position: { lat: 53.46314742885288, lng: -2.2913944951260934},
-    map: map1,
-    title: "Click for more information",
-    animation: google.maps.Animation.DROP
-  })
-
-  const infowindow3 = new google.maps.InfoWindow({
-    content: "<h3>TraffordStadium</h3><div id='infomarkerpic3'></div>",
-
-  });
-
-  google.maps.event.addListener(marker3, "click", function () { 
-    infowindow3.open(map1, marker3);
-  });
-
-  const marker4 = new google.maps.Marker({
-    position: { lat: 53.466916686501506, lng: -2.2339445236776556 },
-    map: map1,
-    title: "Click for more information",
-    animation: google.maps.Animation.DROP
-  })
-
-  const infowindow4 = new google.maps.InfoWindow({
-    content: "<h3>ManchesterUnviersity</h3><div id='infomarkerpic4'></div>",
-
-  });
-
-  google.maps.event.addListener(marker4, "click", function () { 
-    infowindow4.open(map1, marker4);
-  });
-
-  const marker5 = new google.maps.Marker({
-    position: { lat: 53.50292324891882, lng: -2.2337384007642465 },
-    map: map1,
-    title: "Click for more information",
-    animation: google.maps.Animation.DROP
-  })
-
-  const infowindow5 = new google.maps.InfoWindow({
-    content: "<h3>Museum of Transport</h3><div id='infomarkerpic5'></div>",
-  });
-
-  google.maps.event.addListener(marker5, "click", function () { 
-    infowindow5.open(map1, marker5);
-  });
 
   //key used for flickrapi for both maps
   const FlickrapiKey = "3cb96aaa4b49a42b1f147d5bfcf4d9e2";
@@ -219,113 +199,6 @@ function initMap() {
         
     })
 
-  //  ***Wuhan Map***
-  var wuhan = { lat: 30.583332, lng: 114.283333 };
-  var map2 = new google.maps.Map(document.getElementById('wuhanMap'), {
-    zoom: 12,
-    center: wuhan,
-    mapTypeControl: false,
-    fullscreenControl: false,
-    streetViewControl: false,
-    zoomControl: false
-  });
-
-  var wuhanpoint = new google.maps.Marker({
-    position: wuhan,
-    map: map2,
-    title: "Wuhan",
-    animation: google.maps.Animation.DROP
-  });
-
-  const wuhanpointinfo = new google.maps.InfoWindow({
-    content: "<h3>Wuhan</h3> <div id='wuhanmarker'></div>",
-
-  })
-  google.maps.event.addListener(wuhanpoint, "click", function () { //Adds marker to map
-    wuhanpointinfo.open(map1, wuhanpoint);
-  });
-
-  const marker6 = new google.maps.Marker({
-    position: { lat: 30.607516958985308, lng: 114.2995129047251 },
-    map: map2,
-    title: "Click for more information",
-    animation: google.maps.Animation.DROP
-  })
-
-  
-
-  const infowindow6 = new google.maps.InfoWindow({
-    content: "<h3>Jiefang Park</h3> <div id='infomarkerpic6'></div>"
-  });
-
-  google.maps.event.addListener(marker6, "click", function () { //Adds marker to map
-    infowindow6.open(map2, marker6);
-  });
-
-  const marker7 = new google.maps.Marker({
-    position: { lat: 30.58553766638162, lng: 114.27121616405233 },
-    map: map2,
-    title: "Click for more information",
-    animation: google.maps.Animation.DROP
-  })
-
-  const infowindow7 = new google.maps.InfoWindow({
-    content: "<h3>Zhongshan Park</h3> <div id='infomarkerpic7'></div>",
-    shouldFocus: false
-  });
-
-  google.maps.event.addListener(marker7, "click", function () { //Adds marker to map
-    infowindow7.open(map2, marker7);
-  });
-
-  const marker8 = new google.maps.Marker({
-    position: { lat: 30.61170190903964,  lng: 114.24900072516074 },
-    map: map2,
-    title: "Click for more information",
-    animation: google.maps.Animation.DROP
-  })
-
-  const infowindow8 = new google.maps.InfoWindow({
-    content: "<h3>Technology Building</h3> <div id='infomarkerpic8'></div>",
-    shouldFocus: false
-  });
-
-  google.maps.event.addListener(marker8, "click", function () { //Adds marker to map
-    infowindow8.open(map2, marker8);
-  });
-
-  const marker9 = new google.maps.Marker({
-    position: { lat: 30.567503767406887,  lng: 114.29131920092927 },
-    map: map2,
-    title: "Click for more information",
-    animation: google.maps.Animation.DROP
-  })
-
-  const infowindow9 = new google.maps.InfoWindow({
-    content: "<h3>Longwang Pavilion</h3> <div id='infomarkerpic9'></div>",
-    shouldFocus: false
-  });
-
-  google.maps.event.addListener(marker9, "click", function () { //Adds marker to map
-    infowindow9.open(map2, marker9);
-  });
-
-  const marker10 = new google.maps.Marker({
-    position: { lat: 30.591238272616856, lng: 114.24302459419809 },
-    map: map2,
-    title: "Click for more information",
-    animation: google.maps.Animation.DROP
-  })
-
-  const infowindow10 = new google.maps.InfoWindow({
-    content: "<h3>Mengzehu Park</h3> <div id='infomarkerpic10'></div>",
-    shouldFocus: false
-  });
-
-  google.maps.event.addListener(marker10, "click", function () { //Adds marker to map
-    infowindow10.open(map2, marker10);
-  });
-  
   //center wuhan marker
   fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FlickrapiKey}&tags=china&format=json&nojsoncallback=1`) //Tags search for china rather than the city wuhan due to covid pics lol
     .then(response => response.json())
