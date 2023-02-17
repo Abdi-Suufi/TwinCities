@@ -92,7 +92,7 @@ function initMap() {
   fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FlickrapiKey}&tags=manchester&format=json&nojsoncallback=1`)
     .then(response => response.json())
     .then(data => {
-      // Get a Manchester photo container
+      // Get Manchester photo container
       const manchesterPhotosContainer = document.getElementById("manchestermarker");
       // Gets a single photo
       fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FlickrapiKey}&tags=manchester&format=json&nojsoncallback=1`)
@@ -109,7 +109,7 @@ function initMap() {
   fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FlickrapiKey}&tags=mancity&format=json&nojsoncallback=1`)
     .then(response => response.json())
     .then(data => {
-      // Get another Manchester photo container
+      // Get mancity container
       const manchesterPhotosContainer = document.getElementById("infomarkerpic1");
       
       fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FlickrapiKey}&tags=mancity&format=json&nojsoncallback=1`)
@@ -127,7 +127,7 @@ function initMap() {
   fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FlickrapiKey}&tags=Trafford_Park&format=json&nojsoncallback=1`)
     .then(response => response.json())
     .then(data => {
-      // Get yet another Manchester photo container
+      // Get Trafford Park photo container
       const manchesterPhotosContainer = document.getElementById("infomarkerpic2");
       fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FlickrapiKey}&tags=Trafford_Park&format=json&nojsoncallback=1`)
         .then(response => response.json())
@@ -145,7 +145,7 @@ function initMap() {
   fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FlickrapiKey}&tags=Trafford_Stadium&format=json&nojsoncallback=1`)
     .then(response => response.json())
     .then(data => {
-      // Get yet another Manchester photo container
+      // Get trafford stadium photo container
       const manchesterPhotosContainer = document.getElementById("infomarkerpic3");
       fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FlickrapiKey}&tags=Trafford_Stadium&format=json&nojsoncallback=1`)
         .then(response => response.json())
