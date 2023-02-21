@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--HTML comment -->
   /* specifies that the document is written in HTML5 */
 <html>
     /* HTML tag */

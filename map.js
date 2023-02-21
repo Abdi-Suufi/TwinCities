@@ -46,12 +46,8 @@ function initMap() {
       animation: google.maps.Animation.DROP
     });
 
-    const infowindow = new google.maps.InfoWindow({
-      content: content
-    });
-
     google.maps.event.addListener(marker, "click", function () {
-      infowindow.open(map, marker);
+      window.open(content, '_blank', 'width=700,height=600');
     });
   };
   
