@@ -21,6 +21,9 @@
 </head>
     <!-- The <head> tag in HTML is used to contain metadata about an HTML document, such as the title, scripts, styles, and other information that is not displayed on the page itself  -->
 <body onload="initMap()">
+  <div class="navbar">
+      <a href="weather.php">Weather</a>
+  </div>
     <!-- HTML body tag of a web page and specifies that a JavaScript function called initMap() should be called when the web page has finished loading. -->
   <h1>Twin Cities: Manchester and Wuhan</h1>
     <!--HTML header tag that displays a level one heading on the web page. The text "Twin Cities: Manchester and Wuhan" is wrapped in the h1 tags, which denote the largest and most important heading level in HTML. -->
@@ -40,8 +43,6 @@
     in and bronze musical bells from his 5th-century B.C. tomb.</p>
     <!--HTML paragraph tag that displays a block of text on the web page. The text describes Wuhan as a sprawling commercial center in Central China's Hubei province, and mentions some of the city's geographical features and cultural attractions. -->
   <div id="wuhanMap"></div>
-
-  <?php include 'weather.php'; ?>
 </body>
     <!-- the closing HTML body tag, which marks the end of the body section of the web page. All visible content on a web page is contained within the body section.  -->
 <script>

@@ -1,3 +1,8 @@
+<!doctype html>
+    <link rel="stylesheet" href="styles.css">
+    <div class="navbar">
+      <a href="index.php">Home</a>
+  </div>
 <?php
 include 'config.php';
  
@@ -36,5 +41,6 @@ $html .= '<p>Wind speed: '.$windSpeedWuhan.' km/h</p>';
 
 echo $html;
 ?>
+</html>
 
 
