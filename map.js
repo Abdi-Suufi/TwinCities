@@ -176,7 +176,7 @@ function initMap() {
 
     })
 
-  //marker6 idk yet
+  //marker6 museum of transport
   fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${config.flickrApiKey}&tags=Museum_of_Transport&format=json&nojsoncallback=1`)
     .then(response => response.json())
     .then(data => {
