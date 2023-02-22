@@ -1,25 +1,40 @@
 <?php
-$apiKey = 'd439f6429d800a5e1e5491375e19b2af'; // Replace with your OpenWeatherMap API key
-$cityId = '1791247'; // Replace with the ID of the city you want weather information for
+include 'config.php';
+ 
+$dataManchester = file_get_contents($urlManchester);
+$weatherManchester = json_decode($dataManchester);
+$dataWuhan = file_get_contents($urlWuhan);
+$weatherWuhan = json_decode($dataWuhan);
 
-// Build the API URL
-$url = "http://api.openweathermap.org/data/2.5/weather?id=$cityId&appid=$apiKey&units=metric";
+$temperatureManchester = $weatherManchester->main->temp;
+$descriptionManchester = $weatherManchester->weather[0]->description;
+$iconManchester = $weatherManchester->weather[0]->icon;
+$feelsLikeManchester = $weatherManchester->main->feels_like;
+$humidityManchester = $weatherManchester->main->humidity;
+$windSpeedManchester = $weatherManchester->wind->speed;
 
-// Fetch the data from the API
-$data = file_get_contents($url);
-$weather = json_decode($data);
+$temperatureWuhan = $weatherWuhan->main->temp;
+$descriptionWuhan = $weatherWuhan->weather[0]->description;
+$iconWuhan = $weatherWuhan->weather[0]->icon;
+$feelsLikeWuhan = $weatherWuhan->main->feels_like;
+$humidityWuhan = $weatherWuhan->main->humidity;
+$windSpeedWuhan = $weatherWuhan->wind->speed;
 
-// Extract the relevant information from the API response
-$temperature = $weather->main->temp;
-$description = $weather->weather[0]->description;
-$icon = $weather->weather[0]->icon;
+$html = '<h1>Current weather in Manchester<img src="http://openweathermap.org/img/w/'.$iconManchester.'.png"></h1>';
+$html .= '<p>Temperature: '.$temperatureManchester.' &deg;C</p>';
+$html .= '<p>Description: '.$descriptionManchester.'</p>';
+$html .= '<p>Feels like: '.$feelsLikeManchester.' &deg;C</p>';
+$html .= '<p>Humidity: '.$humidityManchester.' %</p>';
+$html .= '<p>Wind speed: '.$windSpeedManchester.' km/h</p>';
 
-// Build the HTML to display the weather information
-$html = "<h1>Current weather in Wuhan</h1>";
-$html .= "<p>Temperature: $temperature &deg;C</p>";
-$html .= "<p>Description: $description</p>";
-$html .= "<img src=\"http://openweathermap.org/img/w/$icon.png\">";
+$html .= '<h1>Current weather in Wuhan<img src="http://openweathermap.org/img/w/'.$iconWuhan.'.png"></h1>';
+$html .= '<p>Temperature: '.$temperatureWuhan.' °C</p>';
+$html .= '<p>Description: '.$descriptionWuhan.'</p>';
+$html .= '<p>Feels like: '.$feelsLikeWuhan.' °C</p>';
+$html .= '<p>Humidity: '.$humidityWuhan.' %</p>';
+$html .= '<p>Wind speed: '.$windSpeedWuhan.' km/h</p>';
 
-// Output the HTML
 echo $html;
 ?>
+
+
