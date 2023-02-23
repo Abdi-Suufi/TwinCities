@@ -47,15 +47,17 @@ function initMap() {
     });
 
     google.maps.event.addListener(marker, "click", function () {
-      window.open(content, '_blank', 'width=700,height=600');
+      console.log(`/landmarks/${encodeURIComponent(content)}`)
+      window.location.href = `landmarks.php?name=${encodeURIComponent(content)}`;
     });
   };
 
-  createMarker(53.482888198445494, -2.2004014365317137, map, "ManCity Stadium Click for more information", "<h3>ManCity Stadium</h3><div id='infomarkerpic1'></div>");
-  createMarker(53.47242932425202, -2.325088007881245, map, "Trafford Park Click for more information", "<h3>TraffordPark</h3><div id='infomarkerpic2'></div>");
-  createMarker(53.46314742885288, -2.2913944951260934, map, "Trafford Stadium Click for more information", "<h3>TraffordStadium</h3><div id='infomarkerpic3'></div>");
-  createMarker(53.466916686501506, -2.2339445236776556, map, "Manchester University Click for more information", "<h3>ManchesterUnviersity</h3><div id='infomarkerpic4'></div>")
-  createMarker(53.50292324891882, -2.2337384007642465, map, "Museum of Transport Click for more information", "<h3>Museum of Transport</h3><div id='infomarkerpic5'></div>")
+
+  createMarker(53.482888198445494, -2.2004014365317137, map, "ManCity Stadium Click for more information", "ManCity Stadium");
+  createMarker(53.47242932425202, -2.325088007881245, map, "Trafford Park Click for more information", "TraffordPark");
+  createMarker(53.46314742885288, -2.2913944951260934, map, "Trafford Stadium Click for more information", "TraffordStadium");
+  createMarker(53.466916686501506, -2.2339445236776556, map, "Manchester University Click for more information", "ManchesterUnviersity")
+  createMarker(53.50292324891882, -2.2337384007642465, map, "Museum of Transport Click for more information", "Museum of Transport")
 
   const manchestercenterpointinfo = new google.maps.InfoWindow({ //Opens mini window when clicking on marker
     content: "<h3>Twitter API Insert</h3> <div id='manchestermarker'></div>", //idk how to id all pics the same without the pictures being tailored to the same filtered image
@@ -66,11 +68,11 @@ function initMap() {
     manchestercenterpointinfo.open(map, manchesterpoint);
   });
 
-  createMarker(30.607516958985308, 114.2995129047251, map2, "Jiefang Park Click for more information", "<h3>Jiefang Park</h3> <div id='infomarkerpic6'></div>")
-  createMarker(30.58553766638162, 114.27121616405233, map2, "Zhongshan Park Click for more information", "<h3>Zhongshan Park</h3> <div id='infomarkerpic7'></div>")
-  createMarker(30.6117019090396, 114.24900072516074, map2, "Technology Building Click for more information", "<h3>Technology Building</h3> <div id='infomarkerpic8'></div>")
-  createMarker(30.567503767406887, 114.29131920092927, map2, "Longwang Pavilion Click for more information", "<h3>Longwang Pavilion</h3> <div id='infomarkerpic9'></div>")
-  createMarker(30.591238272616856, 114.24302459419809, map2, "Menhzehu Park Click for more information", "<h3>Mengzehu Park</h3> <div id='infomarkerpic10'></div>")
+  createMarker(30.607516958985308, 114.2995129047251, map2, "Jiefang Park Click for more information", "Jiefang Park")
+  createMarker(30.58553766638162, 114.27121616405233, map2, "Zhongshan Park Click for more information", "Zhongshan Park")
+  createMarker(30.6117019090396, 114.24900072516074, map2, "Technology Building Click for more information", "Technology Building")
+  createMarker(30.567503767406887, 114.29131920092927, map2, "Longwang Pavilion Click for more information", "Longwang Pavilion")
+  createMarker(30.591238272616856, 114.24302459419809, map2, "Menhzehu Park Click for more information", "Mengzehu Park")
 
 
   const wuhanpointinfo = new google.maps.InfoWindow({
