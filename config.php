@@ -1,4 +1,5 @@
 <?php
+//This code sets up some variables for making API requests to OpenWeatherMap
 $apiKey = 'd439f6429d800a5e1e5491375e19b2af'; 
 $manchesterId = '2643123';
 $wuhanId = '1791247';
