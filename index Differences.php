@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<!--HTML comment -->
-  <!--specifies that the document is written in HTML5  -->
-<html>
-    <!-- HTML tag  -->
-<link rel="stylesheet" href="styles.css">
-  <!--The link tag tells the browser where to find the CSS file, which is specified in the href attribute, and the rel attribute indicates that it is a stylesheet. -->
 
-<head>
-  <!--The <head> tag in HTML is used to contain metadata about an HTML document, such as the title, scripts, styles, and other information that is not displayed on the page itself. -->
+
+
+ 
   <script src="config.js"></script>
       <!-- This is a script tag in HTML that is used to include an external JavaScript file in an HTML document. -->
   <title>Twin Cities: Manchester and Wuhan</title>
