@@ -1,0 +1,58 @@
+<!doctype html>
+<!-- This code begins with an HTML document that includes a stylesheet and a navigation bar with a link to the home page. The EJS script uses the `<% %>` tags to insert JavaScript code that retrieves the weather data from the OpenWeatherMap API and renders it on the page. -->
+<link rel="stylesheet" href="styles.css">
+<div class="navbar">
+  <a href="index.ejs">Home</a>
+</div>
+<%
+const request = require('request');
+const apiKey = 'd439f6429d800a5e1e5491375e19b2af';
+const manchesterId = 2643123;
+const wuhanId = 1791247;
+
+// retrieve weather data for Manchester
+const urlManchester = `http://api.openweathermap.org/data/2.5/weather?id=${manchesterId}&appid=${apiKey}&units=metric`;
+request(urlManchester, function (error, response, body) {
+  const weatherManchester = JSON.parse(body);
+  const temperatureManchester = weatherManchester.main.temp;
+  const descriptionManchester = weatherManchester.weather[0].description;
+  const iconManchester = weatherManchester.weather[0].icon;
+  const feelsLikeManchester = weatherManchester.main.feels_like;
+  const humidityManchester = weatherManchester.main.humidity;
+  const windSpeedManchester = weatherManchester.wind.speed;
+
+  // render the weather data for Manchester
+%>
+  <h1>Current weather in Manchester<img src="http://openweathermap.org/img/w/<%= iconManchester %>.png"></h1>
+  <p>Temperature: <%= temperatureManchester %> &deg;C</p>
+  <p>Description: <%= descriptionManchester %></p>
+  <p>Feels like: <%= feelsLikeManchester %> &deg;C</p>
+  <p>Humidity: <%= humidityManchester %> %</p>
+  <p>Wind speed: <%= windSpeedManchester %> km/h</p>
+<%
+});
+
+// retrieve weather data for Wuhan
+const urlWuhan = `http://api.openweathermap.org/data/2.5/weather?id=${wuhanId}&appid=${apiKey}&units=metric`;
+request(urlWuhan, function (error, response, body) {
+  const weatherWuhan = JSON.parse(body);
+  const temperatureWuhan = weatherWuhan.main.temp;
+  const descriptionWuhan = weatherWuhan.weather[0].description;
+  const iconWuhan = weatherWuhan.weather[0].icon;
+  const feelsLikeWuhan = weatherWuhan.main.feels_like;
+  const humidityWuhan = weatherWuhan.main.humidity;
+  const windSpeedWuhan = weatherWuhan.wind.speed;
+
+  // render the weather data for Wuhan
+%>
+  <h1>Current weather in Wuhan<img src="http://openweathermap.org/img/w/<%= iconWuhan %>.png"></h1>
+  <p>Temperature: <%= temperatureWuhan %> °C</p>
+  <p>Description: <%= descriptionWuhan %></p>
+  <p>Feels like: <%= feelsLikeWuhan %> °C</p>
+  <p>Humidity: <%= humidityWuhan %> %</p>
+  <p>Wind speed: <%= windSpeedWuhan %> km/h</p>
+<%
+});
+%>
+</html>
+

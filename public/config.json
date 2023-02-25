@@ -1,0 +1,10 @@
+{
+    "flickrApiKey": "3cb96aaa4b49a42b1f147d5bfcf4d9e2",
+    "apiKey": "d439f6429d800a5e1e5491375e19b2af",
+    "manchesterId": "2643123",
+    "wuhanId": "1791247",
+    "urlManchester": "http://api.openweathermap.org/data/2.5/weather?id=2643123&appid=d439f6429d800a5e1e5491375e19b2af&units=metric",
+    "urlWuhan": "http://api.openweathermap.org/data/2.5/weather?id=1791247&appid=d439f6429d800a5e1e5491375e19b2af&units=metric"
+}
+
+

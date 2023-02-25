@@ -1,0 +1,43 @@
+body { 
+  /* sets styles for the <body> element of an HTML document. Specifically, it sets the font family to "Arial" and the background color to "lightgrey". */
+  font-family: Arial;
+  background-color: lightgrey;
+}
+
+h1,h2 {
+  /* sets the text alignment of both the <h1> and <h2> elements to center. */
+  text-align: center;
+}
+
+
+#manchesterMap {
+  /* setting the margin of 0 auto, width of 500px and height of 300px of the Manchester map and along side with a 1px solid gray border */
+  margin: 0 auto;
+  width: 500px;
+  height: 300px;
+  border: 1px solid gray;
+}
+
+#wuhanMap {
+ /* setting the margin of 0 auto, width of 500px and height of 300px of the Wuhan map and along side with a 1px solid gray border */
+  margin: 0 auto;
+  width: 500px;
+  height: 300px;
+  border: 1px solid gray;
+}
+
+p {
+  /*sets the background color of all <p> elements on the web page to light grey.*/
+  background-color: lightgrey;
+}
+
+h3 {
+  /* all <h3> elements with blue text color and centered text alignment.*/
+  color: blue;
+  text-align: center;
+}
+/*images with specific IDs and the width of these images are set to 76 pixels.The height of the images are set to "auto," which means it is automatically adjusted to maintain the image's aspect ratio.*/
+#manchestermarker img, #infomarkerpic1 img, #infomarkerpic2 img, #wuhanmarker img, #infomarkerpic3 img, #infomarkerpic4 img, #infomarkerpic5 img, #infomarkerpic6 img, #infomarkerpic7 img, #infomarkerpic8 img, #infomarkerpic9 img, #infomarkerpic10 img{
+  width: 76px;
+  height: auto;
+}
