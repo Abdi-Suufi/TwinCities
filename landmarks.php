@@ -7,23 +7,22 @@
 </head>
 <body>
   <div id="landmarkName"></div>
-  
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const landmarkName = urlParams.get('name');
 
-    document.getElementById('landmarkName').innerHTML = landmarkName;
-  </script>
 
   <?php
+  $urlParams = $_SERVER['QUERY_STRING'];
+  parse_str($urlParams, $params);
+  $landmarkName = $params['name'];
+
   require 'connect.php';
-  
-  $stmt = $pdo->query('SELECT * FROM sys.Landmarks');
-  
+
+  $stmt = $pdo->query('SELECT * FROM sys.Landmarks WHERE name = "' . $landmarkName . '"');
+
   while ($row = $stmt->fetch()) {
-      echo $row['id'] . "\\n";
+      echo $row['id'] . $row['name'] ;
   }
-  ?>
+?>
+
   
 </body>
 </html>

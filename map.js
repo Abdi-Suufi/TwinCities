@@ -66,9 +66,9 @@ function initMap() {
 // an info window with the manchestercenterpointinfo variable that contains a placeholder for Twitter API content.
 
   createMarker(53.482888198445494, -2.2004014365317137, map, "ManCity Stadium Click for more information", "ManCity Stadium");
-  createMarker(53.47242932425202, -2.325088007881245, map, "Trafford Park Click for more information", "TraffordPark");
-  createMarker(53.46314742885288, -2.2913944951260934, map, "Trafford Stadium Click for more information", "TraffordStadium");
-  createMarker(53.466916686501506, -2.2339445236776556, map, "Manchester University Click for more information", "ManchesterUnviersity")
+  createMarker(53.47242932425202, -2.325088007881245, map, "Trafford Park Click for more information", "Trafford Park");
+  createMarker(53.46314742885288, -2.2913944951260934, map, "Trafford Stadium Click for more information", "Trafford Stadium");
+  createMarker(53.466916686501506, -2.2339445236776556, map, "Manchester University Click for more information", "Manchester Unviersity")
   createMarker(53.50292324891882, -2.2337384007642465, map, "Museum of Transport Click for more information", "Museum of Transport")
 
   const manchestercenterpointinfo = new google.maps.InfoWindow({ 
