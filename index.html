@@ -35,12 +35,6 @@
 </style>
 <!-- Styling the aesthetics of the ("col"umn) class-->
 
-<body onload="initMap()">
-  <div class="navbar">
-      <a href="weather.php">Weather</a>
-  </div>
-    <!-- HTML body tag of a web page and specifies that a JavaScript function called initMap() should be called when the web page has finished loading. -->
-
 </head>
 <body>
   <title>Twin Cities: Manchester and Wuhan</title>
@@ -123,7 +117,8 @@
     <div class="card-body">
       <h5 class="card-title">**OpenWeatherAPI Metadata**</h5>
       <p class="card-text">**Weather Description**</p>
-      <a href="#" class="btn btn-outline-light">Weather Info</a>
+      <body onload="initMap()">
+      <a href="weather.php" class="btn btn-outline-light">Weather Info</a>
     </div>
     </div>
   </div>

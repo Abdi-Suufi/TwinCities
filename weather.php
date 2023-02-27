@@ -1,6 +1,6 @@
 -<!doctype html>
 //This code begins with an HTML document that includes a stylesheet and a navigation bar with a link to the home page. The PHP script starts with an include statement that imports the config.php file, which contains the API key and URLs needed to access the OpenWeatherMap API.
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <div class="navbar">
       <a href="index.php">Home</a>
   </div>
