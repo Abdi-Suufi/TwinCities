@@ -3,7 +3,7 @@
   <!--specifies that the document is written in HTML5  -->
 <html>
     <!-- HTML tag  -->
-<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="styles.css">
   <!--The link tag tells the browser where to find the CSS file, which is specified in the href attribute, and the rel attribute indicates that it is a stylesheet. -->
 
 <head>
