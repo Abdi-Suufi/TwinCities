@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 body { 
+=======
+ body { 
+>>>>>>> 625cc6f69c292660f23e7c159531125d7df7cc81
     /* sets styles for the <body> element of an HTML document. Specifically, it sets the font family to "Arial" and the background color to "lightgrey". */
     font-family: Arial;
     background-color: lightgrey;
