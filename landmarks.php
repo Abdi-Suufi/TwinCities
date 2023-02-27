@@ -14,5 +14,16 @@
 
     document.getElementById('landmarkName').innerHTML = landmarkName;
   </script>
+
+  <?php
+  require 'connect.php';
+  
+  $stmt = $pdo->query('SELECT * FROM sys.Landmarks');
+  
+  while ($row = $stmt->fetch()) {
+      echo $row['id'] . "\\n";
+  }
+  ?>
+  
 </body>
 </html>
