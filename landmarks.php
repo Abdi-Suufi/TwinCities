@@ -3,6 +3,7 @@
 //It also includes JavaScript code that extracts the value of the name parameter from the URL query string and sets it as the content of the div element.
 <html>
 <head>
+  <link rel="stylesheet" href="styles.css">
   <title>Landmarks</title>
 </head>
 <body>
@@ -19,7 +20,8 @@
   $stmt = $pdo->query('SELECT * FROM sys.Landmarks WHERE name = "' . $landmarkName . '"');
 
   while ($row = $stmt->fetch()) {
-      echo $row['id'] . $row['name'] ;
+      echo '<h1>' . $row['name'] . '</h1>'
+      . '<h2>' . $row['city'] . ', ' . $row['country'] . '</h2>' ;
   }
 ?>
 
