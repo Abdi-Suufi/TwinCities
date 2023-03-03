@@ -47,7 +47,7 @@ function initMap() {
 
 //This is a function that takes in latitude, longitude, a map object, a title, and content as parameters, and creates a marker on the map at the specified location
  //The marker is given a title and an animation. The function can be used to create markers on a map for various locations
-  const createMarker = (lat, lng, map, title, content) => {
+  const createMarker = (lat, lng, map, title, content, img) => {
     const marker = new google.maps.Marker({
       position: { lat, lng },
       map: map,
@@ -57,15 +57,15 @@ function initMap() {
 //The URL is constructed using a template literal that includes a path to a PHP file landmarks.php, and a query string parameter name whose value is the encoded content of a variable content
 //The PHP file landmarks.php is likely responsible for rendering the HTML for the page that displays information about the selected landmark
     google.maps.event.addListener(marker, "click", function () {
-      console.log(`/landmarks/${encodeURIComponent(content)}`)
-      window.location.href = `landmarks.php?name=${encodeURIComponent(content)}`;
+      console.log(`/landmarks/${encodeURIComponent(content, img)}`)
+      window.location.href = `landmarks.php?name=${encodeURIComponent(content, img)}`;
     });
   };
 //created markers for several locations on the map using the createMarker function
 //Each marker has a title and content associated with it, which can be clicked to redirect to a specific page with more information about the location.
 // an info window with the manchestercenterpointinfo variable that contains a placeholder for Twitter API content.
 
-  createMarker(53.482888198445494, -2.2004014365317137, map, "ManCity Stadium Click for more information", "ManCity Stadium");
+  createMarker(53.482888198445494, -2.2004014365317137, map, "ManCity Stadium Click for more information", "ManCity Stadium", "<div id='infomarkerpic1'></div>");
   createMarker(53.47242932425202, -2.325088007881245, map, "Trafford Park Click for more information", "Trafford Park");
   createMarker(53.46314742885288, -2.2913944951260934, map, "Trafford Stadium Click for more information", "Trafford Stadium");
   createMarker(53.466916686501506, -2.2339445236776556, map, "Manchester University Click for more information", "Manchester Unviersity")
