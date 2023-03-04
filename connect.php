@@ -1,4 +1,5 @@
 <?php
+
 $host = '127.0.0.1';
 $dbname = 'mySQL';
 $username = 'root';
@@ -17,4 +18,5 @@ try {
 } catch (PDOException $e) {
     throw new PDOException($e->getMessage(), (int)$e->getCode());
 }
+
 ?>

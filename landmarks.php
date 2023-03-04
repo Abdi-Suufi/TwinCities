@@ -21,7 +21,8 @@
 
   while ($row = $stmt->fetch()) {
       echo '<h1>' . $row['name'] . '</h1>'
-      . '<h2>' . $row['city'] . ', ' . $row['country'] . '</h2>' ;
+      . '<h2>' . $row['city'] . ', ' . $row['country'] . '</h2>'
+      . '<b>' . $row['description'] ;
   }
 ?>
 

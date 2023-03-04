@@ -1,0 +1,12 @@
+<?xmk version="1.0" enconding="UTF-8" ?>
+<phpunit bootstrap="vendor/autoload.php"
+    colors="true";
+    stopOnFaliure="false">
+
+    <testsuites>
+        <testsuite name="twinCities">
+            <directory>tests</directory>
+
+        </testsuite>
+    </testsuites>
+</phpunit>
