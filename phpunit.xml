@@ -1,4 +1,5 @@
 <?xmk version="1.0" enconding="UTF-8" ?>
+<!-- XML configuration file for the PHPUnit testing framework in PHP-->
 <phpunit bootstrap="vendor/autoload.php"
     colors="true";
     stopOnFaliure="false">
