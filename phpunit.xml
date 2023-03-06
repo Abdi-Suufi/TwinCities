@@ -1,7 +1,7 @@
-<?xmk version="1.0" enconding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- XML configuration file for the PHPUnit testing framework in PHP-->
 <phpunit bootstrap="vendor/autoload.php"
-    colors="true";
+    colors="true"
     stopOnFaliure="false">
 
     <testsuites>
@@ -11,3 +11,4 @@
         </testsuite>
     </testsuites>
 </phpunit>
+
