@@ -9,6 +9,26 @@
 <body>
   <div id="landmarkName"></div>
 
+  <style>
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+  }
+  h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 20px 0;
+  }
+  b {
+    font-size: 20px;
+    font-weight: bold;
+  }
+</style>
 
   <?php
   $urlParams = $_SERVER['QUERY_STRING'];
@@ -22,10 +42,12 @@
   while ($row = $stmt->fetch()) {
       echo '<h1>' . $row['name'] . '</h1>'
       . '<h2>' . $row['city'] . ', ' . $row['country'] . '</h2>'
-      . '<b>' . $row['description'] ;
+      . '<p>' . $row['description'] . '</p>'
+      . '<p><b>Year built:</b> ' . $row['year_built'] . '</p>'
+      . '<p><b>Architect:</b> ' . $row['architect'] . '</p>'
+      . '<p><b>Style:</b> ' . $row['style'] . '</p>';
   }
 ?>
-
   
 </body>
 </html>
