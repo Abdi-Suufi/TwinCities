@@ -66,10 +66,10 @@ function initMap() {
 // an info window with the manchestercenterpointinfo variable that contains a placeholder for Twitter API content.
 
   createMarker(53.482888198445494, -2.2004014365317137, map, "ManCity Stadium Click for more information", "ManCity Stadium", "<div id='infomarkerpic1'></div>");
-  createMarker(53.47242932425202, -2.325088007881245, map, "Trafford Park Click for more information", "Trafford Park");
-  createMarker(53.46314742885288, -2.2913944951260934, map, "Trafford Stadium Click for more information", "Trafford Stadium");
-  createMarker(53.466916686501506, -2.2339445236776556, map, "Manchester University Click for more information", "Manchester Unviersity")
-  createMarker(53.50292324891882, -2.2337384007642465, map, "Museum of Transport Click for more information", "Museum of Transport")
+  createMarker(53.47242932425202, -2.325088007881245, map, "Trafford Park Click for more information", "Trafford Park","<div id='infomarkerpic2'></div>");
+  createMarker(53.46314742885288, -2.2913944951260934, map, "Trafford Stadium Click for more information", "Trafford Stadium","<div id='infomarkerpic3'></div>");
+  createMarker(53.466916686501506, -2.2339445236776556, map, "Manchester University Click for more information", "Manchester Unviersity","<div id='infomarkerpic4'></div>")
+  createMarker(53.50292324891882, -2.2337384007642465, map, "Museum of Transport Click for more information", "Museum of Transport","<div id='infomarkerpic5'></div>")
 
   const manchestercenterpointinfo = new google.maps.InfoWindow({ 
     content: "<h3>Twitter API Insert</h3> <div id='manchestermarker'></div>",
@@ -82,11 +82,11 @@ function initMap() {
   });
 //creating markers for several locations in Wuhan, China using the createMarker function and adding a click listener to each of the markers to display more information about the location
 // also creates an InfoWindow object named wuhanpointinfo that will display information about Wuhan when a user clicks on the city marker  
-  createMarker(30.607516958985308, 114.2995129047251, map2, "Jiefang Park Click for more information", "Jiefang Park")
-  createMarker(30.58553766638162, 114.27121616405233, map2, "Zhongshan Park Click for more information", "Zhongshan Park")
-  createMarker(30.6117019090396, 114.24900072516074, map2, "Technology Building Click for more information", "Technology Building")
-  createMarker(30.567503767406887, 114.29131920092927, map2, "Longwang Pavilion Click for more information", "Longwang Pavilion")
-  createMarker(30.591238272616856, 114.24302459419809, map2, "Menhzehu Park Click for more information", "Mengzehu Park")
+  createMarker(30.607516958985308, 114.2995129047251, map2, "Jiefang Park Click for more information", "Jiefang Park", "<div id='infomarkerpic6'></div>")
+  createMarker(30.58553766638162, 114.27121616405233, map2, "Zhongshan Park Click for more information", "Zhongshan Park","<div id='infomarkerpic7'></div>")
+  createMarker(30.6117019090396, 114.24900072516074, map2, "Technology Building Click for more information", "Technology Building", "<div id='infomarkerpic8'></div>")
+  createMarker(30.567503767406887, 114.29131920092927, map2, "Longwang Pavilion Click for more information", "Longwang Pavilion", "<div id='infomarkerpic9'></div>")
+  createMarker(30.591238272616856, 114.24302459419809, map2, "Menhzehu Park Click for more information", "Mengzehu Park", "<div id='infomarkerpic10'></div>")
 
 
   const wuhanpointinfo = new google.maps.InfoWindow({
