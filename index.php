@@ -50,17 +50,25 @@
 
   /*images with specific IDs and the width of these images are set to 76 pixels.The height of the images are set to "auto," which means it is automatically adjusted to maintain the image's aspect ratio.*/
   #manchestermarker img, #infomarkerpic1 img, #infomarkerpic2 img, #wuhanmarker img, #infomarkerpic3 img, #infomarkerpic4 img, #infomarkerpic5 img, #infomarkerpic6 img, #infomarkerpic7 img, #infomarkerpic8 img, #infomarkerpic9 img, #infomarkerpic10 img{
-    width: 76px;
+    width: 150px;
     height: auto;
   }
 </style>
 <!-- Styling the aesthetics of the ("col"umn) class-->
-
 </head>
 <body>
-  <title>Twin Cities: Manchester and Wuhan</title>
+    <title>Twin Cities: Manchester and Wuhan</title>
+</div>
   <!-- This is the text that will appear in the browser's title bar or tab when the document is loaded. -->
-    <div class="container-fluid border">Twin Cities Project: Manchester | Wuhan</div>
+  <div class="container my-5">
+        <div class="row justify-content-center">
+          <div class="center">
+    <div class="container-fluid border">Twin Cities Project: Manchester | Wuhan 
+    </div>
+    </div>
+</div>
+</div>
+
   <!-- This creates a small border at the top of the webpage with text being displayed -->
     <div class="row">
     <div class="col">
@@ -68,8 +76,8 @@
     
   <button type="button" 
   class="btn btn-outline-dark btn-md">Home</button>
-  <button type="button" 
-  class="btn btn-outline-dark btn-md">About</button>
+  <a type="button" href="about.php"
+  class="btn btn-outline-dark btn-md">About</a>
   </div>
 </div>
 
@@ -144,7 +152,6 @@
     </div>
   </div>
 </head>
-
 </body>
 </html>
  <!-- This ends the HTML document by closing the <html> tag that was opened at the beginning of the document. -->
