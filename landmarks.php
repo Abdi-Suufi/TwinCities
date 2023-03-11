@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+//HTML page that includes a navigation bar and an empty div element with the id of landmarkName.
 <html>
 <head>
 <link rel="stylesheet" href="css/bootstrap.css">
@@ -22,7 +23,7 @@
 </nav>
 <body>
   <div id="landmarkName"></div>
-
+//some styles for HTML elements using CSS
   <style>
   h1 {
     font-size: 36px;
@@ -43,7 +44,7 @@
     font-weight: bold;
   }
 </style>
-
+//This code is a PHP script that fetches data about landmarks from a database and displays it on an HTML page.
   <?php
   $urlParams = $_SERVER['QUERY_STRING'];
   parse_str($urlParams, $params);
