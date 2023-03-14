@@ -8,5 +8,4 @@ $urlManchester = 'http://api.openweathermap.org/data/2.5/weather?id='.$mancheste
 $urlWuhan = 'http://api.openweathermap.org/data/2.5/weather?id='.$wuhanId.'&appid='.$apiKey.'&units=metric';
 $urlManchesterForecast = "api.openweathermap.org/data/2.5/forecast?id=" . $manchesterID . "&appid=" .$apiForecastKey;
 $urlWuhanForecast = "api.openweathermap.org/data/2.5/forecast?id=" . $wuhanID . "&appid=" .$apiForecastKeyKey;
-
 ?>

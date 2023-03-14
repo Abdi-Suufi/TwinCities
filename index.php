@@ -47,6 +47,9 @@
     height: 300px;
     border: 1px solid gray;
   }
+  h3 {
+    color: red;
+  }
 
   /*images with specific IDs and the width of these images are set to 76 pixels.The height of the images are set to "auto," which means it is automatically adjusted to maintain the image's aspect ratio.*/
   #manchestermarker img, #infomarkerpic1 img, #infomarkerpic2 img, #wuhanmarker img, #infomarkerpic3 img, #infomarkerpic4 img, #infomarkerpic5 img, #infomarkerpic6 img, #infomarkerpic7 img, #infomarkerpic8 img, #infomarkerpic9 img, #infomarkerpic10 img{
@@ -76,8 +79,8 @@
     
   <button type="button" 
   class="btn btn-outline-dark btn-md">Home</button>
-  <a type="button" href="about.php"
-  class="btn btn-outline-dark btn-md">About</a>
+  <a type="button" href="flickr.php"
+  class="btn btn-outline-dark btn-md">flickr temporary</a>
   </div>
 </div>
 
