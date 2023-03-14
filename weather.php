@@ -1,14 +1,25 @@
 <!doctype html>
 <!--This code begins with an HTML document that includes a stylesheet and a navigation bar with a link to the home page. The PHP script starts with an include statement that imports the config.php file, which contains the API key and URLs needed to access the OpenWeatherMap API.-->
-<link rel="stylesheet" href="css/bootstrap.css">
-    <div class="navbar">
-      <a href="index.php">Home</a>
-  </div>
   
 <link rel="stylesheet" href="css/bootstrap.css">
-<div class="navbar">
-  <a href="index.php">Home</a>
-</div>
+
+<!-- Add the Bootstrap navbar component -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.php">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="weather.php">Weather</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Landmarks.php">Landmarks</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <?php
 include 'config.php';
 function extractWeatherData($weather) {
