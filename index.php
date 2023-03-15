@@ -24,7 +24,12 @@
 <!-- The <head> tag in HTML is used to contain metadata about an HTML document, such as the title, scripts, styles, and other information that is not displayed on the page itself  -->
 
 <style>
-   
+  nav {
+    margin-bottom: 10px;
+  }
+   .btn {
+    margin: 4px;
+   }
 
     #manchesterMap {
     /* setting the margin of 0 auto, width of 500px and height of 300px of the Manchester map and along side with a 1px solid gray border */
@@ -44,19 +49,20 @@
   h3 {
     color: red;
   }
+  /*Temporary outline */
+  #weather-box {
+    border: 3px solid black;
+    margin: 4px;
+  }
 
-  /*images with specific IDs and the width of these images are set to 76 pixels.The height of the images are set to "auto," which means it is automatically adjusted to maintain the image's aspect ratio.*/
-  #manchestermarker img, #infomarkerpic1 img, #infomarkerpic2 img, #wuhanmarker img, #infomarkerpic3 img, #infomarkerpic4 img, #infomarkerpic5 img, #infomarkerpic6 img, #infomarkerpic7 img, #infomarkerpic8 img, #infomarkerpic9 img, #infomarkerpic10 img{
-    width: 150px;
-    height: auto;
+  #description-box {
+    margin-left: 4px;
   }
 </style>
+
 <!-- Styling the aesthetics of the ("col"umn) class-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="index.php">Home</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
@@ -70,51 +76,64 @@
 </nav>
 </head>
 <body>
-</div>
-  <!-- This is the text that will appear in the browser's title bar or tab when the document is loaded. -->
 
-  <!-- This creates a small border at the top of the webpage with text being displayed -->
-    <div class="row">
-    <div class="col">
-    <div class="col"></div>
-    
-  <button type="button" 
-  class="btn btn-outline-dark btn-md">Home</button>
-  <a type="button" href="flickr.php"
-  class="btn btn-outline-dark btn-md">flickr temporary</a>
-  </div>
-</div>
+<!-- <a type="button" href="flickr.php"
+class="btn btn-outline-dark btn-md">flickr temporary</a> -->
 
+<div class="row">
+<div class="col">
     <div class="container my-5">
         <div class="row justify-content-center">
           <div class="center">
             <h1> Manchester</h1>
             <!--HTML header tag that displays a level one heading on the web page. The text "Manchester" is wrapped in the h1 tags, which denote the largest and most important heading level in HTML. -->
             </div>
-            <div></div>
-            <div class="card bg-dark text-white">
+            <div class="card bg-dark text-white" id="description-box">
             <p> Manchester is a major city in the northwest of England with a rich industrial heritage. The Castlefield conservation area’s 18th-century canal system recalls the city’s days as a textile powerhouse, and visitors can trace this history at the interactive Museum of Science & Industry. The revitalised Salford Quays dockyards now house the Daniel Libeskind-designed Imperial War Museum North and the Lowry cultural centre.</p>
             <!--  HTML paragraph tag that displays a block of text on the web page. The text describes Manchester as a major city in the northwest of England with a rich industrial heritage, and mentions some of the city's historical and cultural attractions.  -->
             <div id='manchesterMap'></div>
             <!-- HTML div tag that creates a container element with an id attribute set to "manchesterMap". -->
-            </div>
-            <div></div>
+          </div>
+</div>
+</div>
+</div>
+<div class="col" id="weather-box">
+<div class="container my-5">
+  <div class="row justify-content-center">
+  <h1>Weather</h1>
+  <?php
+  /* include 'weather.php'; */
+  ?>
+  </div>
+</div>
+</div>
+</div>
 
+<div class="row">
+<div class="col">
     <div class="container my-5">
         <div class="row justify-content-center">
-            <div class="center">
-              <h1> Wuhan</h1>
-              <!--HTML header tag that displays a level two heading on the web page. The text "Wuhan" is wrapped in the h1 tags, which denote a secondary heading level in HTML.  -->
-              </div>
-              <div></div>
-              <div class="card bg-dark text-white">
-              <p> Wuhan, the sprawling capital of Central China’s Hubei province, is a commercial center divided by the Yangtze and Han rivers. The city contains many lakes and parks, including expansive, picturesque East Lake. Nearby, the Hubei Provincial Museum displays relics from the Warring States period, including the Marquis Yi of Zeng’s coff in and bronze musical bells from his 5th-century B.C. tomb.</p>
-              <!--HTML paragraph tag that displays a block of text on the web page. The text describes Wuhan as a sprawling commercial center in Central China's Hubei province, and mentions some of the city's geographical features and cultural attractions. -->
-              <div id="wuhanMap"></div>
-              </body>
-              <!-- the closing HTML body tag, which marks the end of the body section of the web page. All visible content on a web page is contained within the body section.  -->
+          <div class="center">
+            <h1> Manchester</h1>
+            <!--HTML header tag that displays a level one heading on the web page. The text "Manchester" is wrapped in the h1 tags, which denote the largest and most important heading level in HTML. -->
             </div>
-            <div></div>
+            <div class="card bg-dark text-white" id="description-box">
+            <p> Wuhan, the sprawling capital of Central China’s Hubei province, is a commercial center divided by the Yangtze and Han rivers. The city contains many lakes and parks, including expansive, picturesque East Lake. Nearby, the Hubei Provincial Museum displays relics from the Warring States period, including the Marquis Yi of Zeng’s coff in and bronze musical bells from his 5th-century B.C. tomb.</p>
+            <!--  HTML paragraph tag that displays a block of text on the web page. The text describes Manchester as a major city in the northwest of England with a rich industrial heritage, and mentions some of the city's historical and cultural attractions.  -->
+            <div id='wuhanMap'></div>
+            <!-- HTML div tag that creates a container element with an id attribute set to "manchesterMap". -->
+          </div>
+</div>
+</div>
+</div>
+<div class="col" id="weather-box">
+<div class="container my-5">
+  <div class="row justify-content-center">
+  <h1>Weather</h1>
+  </div>
+</div>
+</div>
+</div>
 
     <div class="container my-5">
     <div class="row justify-content-center">
@@ -131,7 +150,6 @@
           /* the fetch() function to make a network request to the Flickr API to retrieve photos tagged with "Wuhan"*/
     </script>
     </div>
-</div>
 </div>
 <div class="card" style="width: 18rem;"> 
   <div class="card bg-dark text-white">
