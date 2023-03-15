@@ -37,10 +37,10 @@ $points_of_interest = array(
     'Technology Building' => array('tag' => 'Technology+Building', 'id' => 'Technology-Building'),
     'Longwang Pavilion' => array('tag' => 'Longwang', 'id' => 'Longwang-Pavilion'),
     //The tag is bugging out here
-    'Mengzehu Park' => array('tag' => 'Mengzehu+Park', 'id' => 'Mengzehu-Park'),
+    'Mengzehu Park' => array('tag' => 'Mengzehu+Park', 'id' => 'Mengzehu-Park')
 );
 
-// Make API requests and display photos in separate divs with unique IDs
+// Makes API requests and display photos in separate divs with unique IDs
 foreach ($points_of_interest as $poi_name => $poi_data) {
     $url = $url_base . '&tags=' . $poi_data['tag'];
     $response = file_get_contents($url);
