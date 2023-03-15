@@ -6,6 +6,12 @@ $manchesterId = '2643123';
 $wuhanId = '1791247';
 $urlManchester = 'http://api.openweathermap.org/data/2.5/weather?id='.$manchesterId.'&appid='.$apiKey.'&units=metric';
 $urlWuhan = 'http://api.openweathermap.org/data/2.5/weather?id='.$wuhanId.'&appid='.$apiKey.'&units=metric';
+<<<<<<< Updated upstream
 $urlManchesterForecast = "api.openweathermap.org/data/2.5/forecast?id=" . $manchesterID . "&appid=" .$apiForecastKey;
 $urlWuhanForecast = "api.openweathermap.org/data/2.5/forecast?id=" . $wuhanID . "&appid=" .$apiForecastKeyKey;
+=======
+$urlManchesterForecast = "api.openweathermap.org/data/2.5/forecast?id=" . $manchesterID . "&appid=" .$apiKey;
+$urlWuhanForecast = "api.openweathermap.org/data/2.5/forecast?id=" . $wuhanID . "&appid=" .$apiKey;
+
+>>>>>>> Stashed changes
 ?>

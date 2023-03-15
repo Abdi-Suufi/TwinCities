@@ -39,6 +39,57 @@ function extractWeatherData($weather) {
     );
 }
 
+function getWeatherData($url, $cityName) {
+
+  $response = file_get_contents($url);
+  $json = json_decode($response);
+  $data = extractWeatherData($json);
+
+  // Extract the relevant weather data for the next 5 days at 3-hour intervals
+  $forecastData = array();
+  foreach ($data->list as $forecast) {
+      $dateTime = new DateTime($forecast->dt_txt);
+      if ($dateTime->format('H') == '03' && $dateTime < (new DateTime('+5 days'))) {
+          $temperature = round($forecast->main->temp - 273.15, 1);
+          $description = $forecast->weather[0]->description;
+          $icon = $forecast->weather[0]->icon;
+          $feelsLike = round($forecast->main->feels_like - 273.15, 1);
+          $humidity = $forecast->main->humidity;
+          $windSpeed = $forecast->wind->speed;
+          $forecastData[] = array(
+              'dateTime' => $dateTime->format('Y-m-d H:i:s'),
+              'temperature' => $temperature,
+              'description' => $description,
+              'icon' => $icon,
+              'feelsLike' => $feelsLike,
+              'humidity' => $humidity,
+              'windSpeed' => $windSpeed,
+          );
+      }
+  }
+
+  // Output the forecast data as HTML
+  $html = '<h2>' . $cityName . '</h2>';
+  $html .= '<table>';
+  $html .= '<tr><th>Date/Time</th><th>Description</th><th>Temperature</th><th>Feels Like</th><th>Humidity</th><th>Wind Speed</th></tr>';
+  foreach ($forecastData as $forecast) {
+      $html .= '<tr>';
+      $html .= '<td>' . $forecast['dateTime'] . '</td>';
+      $html .= '<td>' . $forecast['description'] . '</td>';
+      $html .= '<td>' . $forecast['temperature'] . ' &deg;C</td>';
+      $html .= '<td>' . $forecast['feelsLike'] . ' &deg;C</td>';
+      $html .= '<td>' . $forecast['humidity'] . '%</td>';
+      $html .= '<td>' . $forecast['windSpeed'] . ' m/s</td>';
+      $html .= '</tr>';
+  }
+  $html .= '</table>';
+
+  echo $html;
+}
+
+getWeatherData($urlManchesterForecast, "Manchester");
+getWeatherData($urlWuhanForecast, "Wuhan");
+
   
 // Retrieve weather data for Manchester and Wuhan
 $dataManchester = file_get_contents($urlManchester);

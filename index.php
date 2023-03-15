@@ -24,13 +24,7 @@
 <!-- The <head> tag in HTML is used to contain metadata about an HTML document, such as the title, scripts, styles, and other information that is not displayed on the page itself  -->
 
 <style>
-    [class*="col"] 
-    {
-    padding: 1rem;
-    background-color: lightslategrey;
-    font-family: Tahoma;
-    border: 2px black;
-    color: black; }
+   
 
     #manchesterMap {
     /* setting the margin of 0 auto, width of 500px and height of 300px of the Manchester map and along side with a 1px solid gray border */
