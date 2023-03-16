@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-//HTML page that includes a navigation bar and an empty div element with the id of landmarkName.
+<!--HTML page that includes a navigation bar and an empty div element with the id of landmarkName.-->
 <html>
 <head>
   <meta charset="utf-8">
@@ -51,7 +51,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-//This code is a PHP script that fetches data about landmarks from a database and displays it on an HTML page.
+<!--This code is a PHP script that fetches data about landmarks from a database and displays it on an HTML page.-->
 <?php
   $urlParams = $_SERVER['QUERY_STRING'];
   parse_str($urlParams, $params);
