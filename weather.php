@@ -3,6 +3,43 @@
   
 <link rel="stylesheet" href="css/bootstrap.css">
 
+<style>
+  table {
+border-collapse: collapse;
+width: 100%;
+}
+
+th, td {
+padding: 8px;
+text-align: left;
+border-bottom: 1px solid #ddd;
+}
+
+th {
+background-color: #f2f2f2;
+color: #333;
+}
+
+h1 {
+font-size: 24px;
+}
+
+p {
+margin: 0 0 8px;
+}
+
+.navbar {
+margin-bottom: 32px;
+}
+
+.nav-link {
+color: #007bff;
+}
+
+.nav-link:hover {
+color: #0056b3;
+}
+</style>
 <!-- Add the Bootstrap navbar component -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="index.php">Home</a>
@@ -49,18 +86,18 @@ function displayWeatherData($urlManchester, $urlWuhan) {
   $manchesterData = extractWeatherData($weatherManchester);
   $wuhanData = extractWeatherData($weatherWuhan);
 
-  $html = '<table class="table table-striped">'.
-    '<thead><tr><th>Manchester</th><th>Wuhan</th></tr></thead>'.
+  $html = '<table class="table table-striped table-bordered">'.
+    '<thead class="thead-dark"><tr><th>Manchester</th><th>Wuhan</th></tr></thead>'.
     '<tbody>'.
       '<tr>'.
-        '<td><h1>Current weather in Manchester<img src="http://openweathermap.org/img/w/' . $manchesterData['icon'] . '.png"></h1>'.
+        '<td class="bg-primary text-white"><h1>Current weather in Manchester<img src="http://openweathermap.org/img/w/' . $manchesterData['icon'] . '.png"></h1>'.
         '<p>Temperature: ' . $manchesterData['temperature'] . ' &deg;C</p>'.
         '<p>Description: ' . $manchesterData['description'] . '</p>'.
         '<p>Feels like: ' . $manchesterData['feelsLike'] . ' &deg;C</p>'.
         '<p>Humidity: ' . $manchesterData['humidity'] . ' %</p>'.
         '<p>Wind speed: ' . $manchesterData['windSpeed'] . ' km/h</p></td>'.
 
-        '<td><h1>Current weather in Wuhan<img src="http://openweathermap.org/img/w/' . $wuhanData['icon'] . '.png"></h1>'.
+        '<td class="bg-success"><h1>Current weather in Wuhan<img src="http://openweathermap.org/img/w/' . $wuhanData['icon'] . '.png"></h1>'.
         '<p>Temperature: ' . $wuhanData['temperature'] . ' &deg;C</p>'.
         '<p>Description: ' . $wuhanData['description'] . '</p>'.
         '<p>Feels like: ' . $wuhanData['feelsLike'] . ' &deg;C</p>'.
@@ -69,6 +106,7 @@ function displayWeatherData($urlManchester, $urlWuhan) {
       '</tr>'.
     '</tbody>'.
   '</table>';
+
 
   echo $html;
 }
@@ -94,7 +132,7 @@ function getWeatherData($url, $cityName) {
           $humidity = $forecast->main->humidity;
           $windSpeed = $forecast->wind->speed;
           $forecastData[] = array(
-              'dateTime' => $dateTime->format('Y-m-d H:i:s'),
+              'dateTime' => $dateTime->format('d-m-Y'),
               'temperature' => $temperature,
               'description' => $description,
               'icon' => $icon,
@@ -106,36 +144,39 @@ function getWeatherData($url, $cityName) {
   }
 
   // Output the forecast data as HTML
-$html = '<h2>' . $cityName . '</h2>';
-$html .= '<div class="table-responsive">';
-$html .= '<table class="table table-striped">';
-$html .= '<thead>';
-$html .= '<tr>';
-$html .= '<th>Date/Time</th>';
-$html .= '<th>Description</th>';
-$html .= '<th>Temperature (&deg;C)</th>';
-$html .= '<th>Feels Like (&deg;C)</th>';
-$html .= '<th>Humidity (%)</th>';
-$html .= '<th>Wind Speed (m/s)</th>';
-$html .= '</tr>';
-$html .= '</thead>';
-$html .= '<tbody>';
-foreach ($forecastData as $forecast) {
-    $html .= '<tr>';
-    $html .= '<td>' . $forecast['dateTime'] . '</td>';
-    $html .= '<td>' . $forecast['description'] . '</td>';
-    $html .= '<td>' . $forecast['temperature'] . '</td>';
-    $html .= '<td>' . $forecast['feelsLike'] . '</td>';
-    $html .= '<td>' . $forecast['humidity'] . '</td>';
-    $html .= '<td>' . $forecast['windSpeed'] . '</td>';
-    $html .= '</tr>';
-}
-$html .= '</tbody>';
-$html .= '</table>';
-$html .= '</div>';
+  $html = '<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>' . $cityName . '</th>
+        <th></th>
+      </tr>
+      <tr>
+        <th>Date/Time</th>
+        <th>Description</th>
+        <th>Temperature (&deg;C)</th>
+        <th>Feels Like (&deg;C)</th>
+        <th>Humidity (%)</th>
+        <th>Wind Speed (m/s)</th>
+      </tr>
+    </thead>
+    <tbody>';
+  foreach ($forecastData as $forecast) {
+    $html .= '<tr>
+      <td>' . $forecast['dateTime'] . '</td>
+      <td>' . $forecast['description'] . '</td>
+      <td>' . $forecast['temperature'] . '</td>
+      <td>' . $forecast['feelsLike'] . '</td>
+      <td>' . $forecast['humidity'] . '</td>
+      <td>' . $forecast['windSpeed'] . '</td>
+    </tr>';
+  }
+  $html .= '</tbody>
+    </table>
+  </div>';
 
 echo $html;
-}
+
 
 
 getWeatherData($urlManchesterForecast, "Manchester Forecast");
