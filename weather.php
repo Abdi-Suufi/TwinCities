@@ -176,7 +176,7 @@ function getWeatherData($url, $cityName) {
   </div>';
 
 echo $html;
-
+}
 
 
 getWeatherData($urlManchesterForecast, "Manchester Forecast");
