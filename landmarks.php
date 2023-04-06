@@ -60,17 +60,19 @@ function getFlickrPhotoUrl($landmark_tag) {
 }
 
 function displayLandmarkCard($row, $photo_url) {
-    echo '<div class="card mb-3">';
-    echo '<img class="card-img-top" src="' . $photo_url . '" alt="' . $photo['title'] . '">';
-    echo '<div class="card-body">';
-    echo '<h1 class="card-title">' . $row['name'] . '</h1>';
-    echo '<h2 class="card-subtitle mb-2 text-muted">' . $row['city'] . ', ' . $row['country'] . '</h2>';
-    echo '<p class="card-text">' . $row['description'] . '</p>';
-    echo '<p class="card-text"><b>Year built:</b> ' . $row['year_built'] . '</p>';
-    echo '<p class="card-text"><b>Architect:</b> ' . $row['architect'] . '</p>';
-    echo '<p class="card-text"><b>Style:</b> ' . $row['style'] . '</p>';
-    echo '</div></div>';
+  $photo = array('title' => ''); // Assign a default value to the $photo variable
+  echo '<div class="card mb-3">';
+  echo '<img class="card-img-top" src="' . $photo_url . '" alt="' . $photo['title'] . '">';
+  echo '<div class="card-body">';
+  echo '<h1 class="card-title">' . $row['name'] . '</h1>';
+  echo '<h2 class="card-subtitle mb-2 text-muted">' . $row['city'] . ', ' . $row['country'] . '</h2>';
+  echo '<p class="card-text">' . $row['description'] . '</p>';
+  echo '<p class="card-text"><b>Year built:</b> ' . $row['year_built'] . '</p>';
+  echo '<p class="card-text"><b>Architect:</b> ' . $row['architect'] . '</p>';
+  echo '<p class="card-text"><b>Style:</b> ' . $row['style'] . '</p>';
+  echo '</div></div>';
 }
+
 ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="index.php">Home</a>
