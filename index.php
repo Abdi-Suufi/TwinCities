@@ -36,7 +36,6 @@
     margin: 0 auto;
     width: 500px;
     height: 300px;
-    border: 1px solid gray;
   }
   
   #wuhanMap {
@@ -44,7 +43,6 @@
     margin: 0 auto;
     width: 500px;
     height: 300px;
-    border: 1px solid gray;
   }
   h3 {
     color: red;
@@ -88,7 +86,7 @@ class="btn btn-outline-dark btn-md">flickr temporary</a> -->
             <h1> Manchester</h1>
             <!--HTML header tag that displays a level one heading on the web page. The text "Manchester" is wrapped in the h1 tags, which denote the largest and most important heading level in HTML. -->
             </div>
-            <div class="card bg-dark text-white" id="description-box">
+            <div  id="description-box">
             <p> Manchester is a major city in the northwest of England with a rich industrial heritage. The Castlefield conservation area’s 18th-century canal system recalls the city’s days as a textile powerhouse, and visitors can trace this history at the interactive Museum of Science & Industry. The revitalised Salford Quays dockyards now house the Daniel Libeskind-designed Imperial War Museum North and the Lowry cultural centre.</p>
             <!--  HTML paragraph tag that displays a block of text on the web page. The text describes Manchester as a major city in the northwest of England with a rich industrial heritage, and mentions some of the city's historical and cultural attractions.  -->
             <div id='manchesterMap'></div>
@@ -117,7 +115,7 @@ class="btn btn-outline-dark btn-md">flickr temporary</a> -->
             <h1> Manchester</h1>
             <!--HTML header tag that displays a level one heading on the web page. The text "Manchester" is wrapped in the h1 tags, which denote the largest and most important heading level in HTML. -->
             </div>
-            <div class="card bg-dark text-white" id="description-box">
+            <div  id="description-box">
             <p> Wuhan, the sprawling capital of Central China’s Hubei province, is a commercial center divided by the Yangtze and Han rivers. The city contains many lakes and parks, including expansive, picturesque East Lake. Nearby, the Hubei Provincial Museum displays relics from the Warring States period, including the Marquis Yi of Zeng’s coff in and bronze musical bells from his 5th-century B.C. tomb.</p>
             <!--  HTML paragraph tag that displays a block of text on the web page. The text describes Manchester as a major city in the northwest of England with a rich industrial heritage, and mentions some of the city's historical and cultural attractions.  -->
             <div id='wuhanMap'></div>
