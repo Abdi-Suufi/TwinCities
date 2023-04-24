@@ -95,16 +95,6 @@ class="btn btn-outline-dark btn-md">flickr temporary</a> -->
 </div>
 </div>
 </div>
-<div class="col" id="weather-box">
-<div class="container my-5">
-  <div class="row justify-content-center">
-  <h1>Weather</h1>
-  <?php
-  /* include 'weather.php'; */
-  ?>
-  </div>
-</div>
-</div>
 </div>
 
 <div class="row">
@@ -124,31 +114,10 @@ class="btn btn-outline-dark btn-md">flickr temporary</a> -->
 </div>
 </div>
 </div>
-<div class="col" id="weather-box">
-<div class="container my-5">
-  <div class="row justify-content-center">
-  <h1>Weather</h1>
-  </div>
-</div>
-</div>
+
 </div>
 
-    <div class="container my-5">
-    <div class="row justify-content-center">
-    <button type="button" class="btn btn-outline-dark">View Manchester Map</button>
-    <script>
-      /* the opening tag for a script element in HTML. The script element is used to embed or reference client-side scripts, such as JavaScript, on a web page.*/
-    fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${config.flickrApiKey}&tags=manchester&format=json&nojsoncallback=1`)
-    /*  the fetch() function in JavaScript to make a network request to the Flickr API to retrieve photos tagged with "Manchester".*/
-    </script>
-      <!-- This ends the JavaScript code block that was started earlier with the <script> -->
-    <button type="button" class="btn btn-outline-dark">View Wuhan Map</button>
-    <script>
-      fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${config.flickrApiKey}&tags=Wuhan&format=json&nojsoncallback=1`)
-          /* the fetch() function to make a network request to the Flickr API to retrieve photos tagged with "Wuhan"*/
-    </script>
-    </div>
-</div>
+    
 <div class="card" style="width: 18rem;"> 
   <div class="card bg-dark text-white">
     <img src="https://www.orphanednation.com/wp-content/uploads/2018/12/DSC_8830-1024x678-1024x678.jpg">
