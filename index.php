@@ -30,7 +30,7 @@
     }
 
     h1 {
-      color: white;
+      color: grey;
     }
 
     nav {
