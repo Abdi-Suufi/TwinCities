@@ -31,6 +31,7 @@
     background-attachment: fixed;
     background-color: rgba(0,0,0,0.1);
     background-blend-mode: lighten;
+    overflow-x: hidden;
   }
 
   h1 {
@@ -53,6 +54,9 @@
     height: 300px;
   }
   
+  #manchesterMap:hover {
+    transform: scale(1.05);
+  }
   #wuhanMap {
    /* setting the margin of 0 auto, width of 500px and height of 300px of the Wuhan map and along side with a 1px solid gray border */
     margin: 0 auto;
@@ -77,10 +81,15 @@
     margin-left: 4px;
   }
 
+  .card:hover{
+    transform: scale(1.05);
+    transition: 0.2s;
+}
 </style>
 
 <!-- Styling the aesthetics of the ("col"umn) class-->
-<nav class="navbar navbar-expand-lg navbar-light">
+<div class="fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
   <a class="navbar-brand" href="index.php" style="margin-left: 2px;">Home</a>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
@@ -91,6 +100,7 @@
         <a class="nav-link" href="Landmarks.php">Landmarks</a>
       </li>
     </ul>
+    </div>
   </div>
 </nav>
 
@@ -137,8 +147,8 @@ class="btn btn-outline-dark btn-md">flickr temporary</a> -->
 </div>
 </div>
 
-    
-<div class="card" style="width: 18rem;"> 
+<div class="row" style="margin-bottom: 30px;">
+<div class="card mx-auto" style="width: 18rem;"> 
   <div class="card bg-dark text-white">
     <img src="https://www.orphanednation.com/wp-content/uploads/2018/12/DSC_8830-1024x678-1024x678.jpg" alt="wuhan-tower">
     <div class="card-body">
@@ -147,19 +157,20 @@ class="btn btn-outline-dark btn-md">flickr temporary</a> -->
       <a href="landmarks.php" class="btn btn-outline-light">Landmark Info</a>
     </div>
   </div>
-  </div>
+</div>
 
-  <div class="card" style="width: 18rem;"> 
-    <div class="card bg-dark text-white">
+  <div class="card mx-auto" style="width: 18rem;"> 
+  <div class="card bg-dark text-white">
+    <img src="https://www.orphanednation.com/wp-content/uploads/2018/12/DSC_8830-1024x678-1024x678.jpg" alt="wuhan-tower">
     <div class="card-body">
-      <h5 class="card-title">**OpenWeatherAPI Metadata**</h5>
-      <p class="card-text">**Weather Description**</p>
-      
-      <body onload="initMap()">
+      <h5 class="card-title">Weather</h5>
+      <p class="card-text">Click button below to view weather details for both Manchester and Wuhan.</p>
       <a href="weather.php" class="btn btn-outline-light">Weather Info</a>
     </div>
-    </div>
   </div>
+  </div>
+  </div>
+      <body onload="initMap()">
 </body>
 </html>
  <!-- This ends the HTML document by closing the <html> tag that was opened at the beginning of the document. -->
