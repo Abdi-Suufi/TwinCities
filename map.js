@@ -63,7 +63,6 @@ function initMap() {
   };
 //created markers for several locations on the map using the createMarker function
 //Each marker has a title and content associated with it, which can be clicked to redirect to a specific page with more information about the location.
-// an info window with the manchestercenterpointinfo variable that contains a placeholder for Twitter API content.
 
   createMarker(53.482888198445494, -2.2004014365317137, map, "ManCity Stadium Click for more information", "ManCity Stadium", "<div id='infomarkerpic1'></div>");
   createMarker(53.47242932425202, -2.325088007881245, map, "Trafford Park Click for more information", "Trafford Park","<div id='infomarkerpic2'></div>");
@@ -72,7 +71,7 @@ function initMap() {
   createMarker(53.50292324891882, -2.2337384007642465, map, "Museum of Transport Click for more information", "Museum of Transport","<div id='infomarkerpic5'></div>")
 
   const manchestercenterpointinfo = new google.maps.InfoWindow({ 
-    content: "<h3>Twitter API Insert</h3> <div id='manchestermarker'></div>",
+    content: "<h3>Manchester</h3> <div id='manchestermarker'></div>",
 
   })
   //adds an event listener to the manchesterpoint marker that listens for a click event

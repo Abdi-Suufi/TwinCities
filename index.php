@@ -3,6 +3,7 @@
 <!--specifies that the document is written in HTML5  -->
 <html lang="en">
 <html>
+  <body>
     <!-- HTML tag  -->
 <head>
    <!--The <head> tag in HTML is used to contain metadata about an HTML document, such as the title, scripts, styles, and other information that is not displayed on the page itself. -->
@@ -24,8 +25,21 @@
 <!-- The <head> tag in HTML is used to contain metadata about an HTML document, such as the title, scripts, styles, and other information that is not displayed on the page itself  -->
 
 <style>
+  body {
+    background-image: url("https://assets.editorial.aetnd.com/uploads/2015/02/topic-golden-gate-bridge-gettyimages-177770941.jpg");
+    object-fit: cover;
+    background-attachment: fixed;
+    background-color: rgba(0,0,0,0.1);
+    background-blend-mode: lighten;
+  }
+
+  h1 {
+    color: white;
+  }
   nav {
     margin-bottom: 10px;
+    top: 0;
+    position: fixed;
   }
    .btn {
     margin: 4px;
@@ -55,16 +69,18 @@
 
   #description-box {
     margin-left: 4px;
+    background-color: lightgrey;
   }
+
 </style>
 
 <!-- Styling the aesthetics of the ("col"umn) class-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="index.php">Home</a>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="index.php" style="margin-left: 2px;">Home</a>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="weather.php">Weather</a>
+        <a class="nav-link black" href="weather.php">Weather</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="Landmarks.php">Landmarks</a>
@@ -73,14 +89,13 @@
   </div>
 </nav>
 </head>
-<body>
 
 <!-- <a type="button" href="flickr.php"
 class="btn btn-outline-dark btn-md">flickr temporary</a> -->
 
 <div class="row">
 <div class="col">
-    <div class="container my-5">
+    <div class="container my-5" id="city-info-box">
         <div class="row justify-content-center">
           <div class="center">
             <h1> Manchester</h1>
@@ -88,10 +103,11 @@ class="btn btn-outline-dark btn-md">flickr temporary</a> -->
             </div>
             <div  id="description-box">
             <p> Manchester is a major city in the northwest of England with a rich industrial heritage. The Castlefield conservation area’s 18th-century canal system recalls the city’s days as a textile powerhouse, and visitors can trace this history at the interactive Museum of Science & Industry. The revitalised Salford Quays dockyards now house the Daniel Libeskind-designed Imperial War Museum North and the Lowry cultural centre.</p>
+            </div>
             <!--  HTML paragraph tag that displays a block of text on the web page. The text describes Manchester as a major city in the northwest of England with a rich industrial heritage, and mentions some of the city's historical and cultural attractions.  -->
             <div id='manchesterMap'></div>
             <!-- HTML div tag that creates a container element with an id attribute set to "manchesterMap". -->
-          </div>
+          
 </div>
 </div>
 </div>
@@ -99,22 +115,22 @@ class="btn btn-outline-dark btn-md">flickr temporary</a> -->
 
 <div class="row">
 <div class="col">
-    <div class="container my-5">
+    <div class="container my-5" id="city-info-box">
         <div class="row justify-content-center">
           <div class="center">
-            <h1> Manchester</h1>
+            <h1> Wuhan</h1>
             <!--HTML header tag that displays a level one heading on the web page. The text "Manchester" is wrapped in the h1 tags, which denote the largest and most important heading level in HTML. -->
             </div>
             <div  id="description-box">
             <p> Wuhan, the sprawling capital of Central China’s Hubei province, is a commercial center divided by the Yangtze and Han rivers. The city contains many lakes and parks, including expansive, picturesque East Lake. Nearby, the Hubei Provincial Museum displays relics from the Warring States period, including the Marquis Yi of Zeng’s coff in and bronze musical bells from his 5th-century B.C. tomb.</p>
+            </div>
             <!--  HTML paragraph tag that displays a block of text on the web page. The text describes Manchester as a major city in the northwest of England with a rich industrial heritage, and mentions some of the city's historical and cultural attractions.  -->
             <div id='wuhanMap'></div>
             <!-- HTML div tag that creates a container element with an id attribute set to "manchesterMap". -->
-          </div>
+          
 </div>
 </div>
 </div>
-
 </div>
 
     
@@ -122,8 +138,8 @@ class="btn btn-outline-dark btn-md">flickr temporary</a> -->
   <div class="card bg-dark text-white">
     <img src="https://www.orphanednation.com/wp-content/uploads/2018/12/DSC_8830-1024x678-1024x678.jpg">
     <div class="card-body">
-      <h5 class="card-title">**FLICKR API POI Name**</h5>
-      <p class="card-text">**POI Description**</p>
+      <h5 class="card-title">Landmarks</h5>
+      <p class="card-text">Click button below to view information about each landmark on each map</p>
       <a href="landmarks.php" class="btn btn-outline-light">Landmark Info</a>
     </div>
   </div>
