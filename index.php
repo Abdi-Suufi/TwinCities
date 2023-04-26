@@ -16,6 +16,8 @@
   <link rel="page icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1527/1527807.png">
   <!-- This is an HTML link tag that is used to specify the favicon for a web page.  -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpHvJ3OmlFeu3pJ3kcGMlR1860aQSepLo"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <!-- HTML script tag that loads the Google Maps JavaScript API into an HTML document  -->
   <script src="map.js"></script>
   <!-- HTML script tag that links to an external JavaScript file named "map.js" and loads it into an HTML document.  -->
@@ -29,6 +31,11 @@
       overflow-x: hidden;
     }
 
+    #myCarousel {
+      width: 500px;
+      height: 300px;
+    }
+    
     h1 {
       color: white;
     }
@@ -47,6 +54,8 @@
       margin: 0 auto;
       width: 500px;
       height: 300px;
+      transition: 0.2s;
+      top:10px;
       box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
               0 2px 2px rgba(0,0,0,0.11), 
               0 4px 4px rgba(0,0,0,0.11), 
@@ -57,12 +66,15 @@
     
     #manchesterMap:hover {
       transform: scale(1.05);
+      transition: 0.2s;
     }
     #wuhanMap {
     /* setting the margin of 0 auto, width of 500px and height of 300px of the Wuhan map and along side with a 1px solid gray border */
       margin: 0 auto;
       width: 500px;
       height: 300px;
+      transition: 0.2s;
+      top:10px;
       box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
               0 2px 2px rgba(0,0,0,0.11), 
               0 4px 4px rgba(0,0,0,0.11), 
@@ -70,6 +82,12 @@
               0 16px 16px rgba(0,0,0,0.11), 
               0 32px 32px rgba(0,0,0,0.11);
     }
+
+    #wuhanMap:hover {
+      transform: scale(1.05);
+      transition: 0.2s;
+    }
+
     h3 {
       color: red;
     }
