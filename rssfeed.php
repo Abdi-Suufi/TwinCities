@@ -11,10 +11,11 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Retrieve data from the database
+// Retrieve data for Manchester and Wuhan
 $sql = "SELECT cities.name as city, landmarks.name as landmark, landmarks.description, landmarks.image_url, landmarks.date_added
         FROM cities
         INNER JOIN landmarks ON cities.id = landmarks.city_id
+        WHERE cities.name IN ('Manchester', 'Wuhan')
         ORDER BY landmarks.date_added DESC
         LIMIT 10";
 $result = mysqli_query($conn, $sql);
@@ -50,3 +51,4 @@ echo '</channel>
 
 mysqli_close($conn);
 ?>
+
