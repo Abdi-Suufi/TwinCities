@@ -27,6 +27,13 @@ class weatherTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals($expected, extractWeatherData($weather));
     }
 
+    public function testDisplayWeatherDataOutput() {
+        $urlManchester = "http://api.openweathermap.org/data/2.5/weather?q=Manchester,uk&units=metric&appid=d439f6429d800a5e1e5491375e19b2af";
+        $urlWuhan = "http://api.openweathermap.org/data/2.5/weather?q=Wuhan,cn&units=metric&appid=d439f6429d800a5e1e5491375e19b2af";
+        $this->expectOutputRegex('/Current weather in Manchester/');
+        $this->expectOutputRegex('/Current weather in Wuhan/');
+        displayWeatherData($urlManchester, $urlWuhan);
+      }
 }
 
 ?>
