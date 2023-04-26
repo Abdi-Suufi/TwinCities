@@ -26,5 +26,7 @@ class weatherTest extends \PHPUnit\Framework\TestCase
 
         $this->assertEquals($expected, extractWeatherData($weather));
     }
+
 }
+
 ?>
