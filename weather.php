@@ -17,10 +17,24 @@ border-collapse: collapse;
 width: 100%;
 }
 
+body {
+      background-image: url("https://assets.editorial.aetnd.com/uploads/2015/02/topic-golden-gate-bridge-gettyimages-177770941.jpg");
+      object-fit: cover;
+      background-attachment: fixed;
+      background-color: rgba(0,0,0,0.1);
+      background-blend-mode: lighten;
+      overflow-x: hidden;
+    }
+
 th, td {
 padding: 8px;
 text-align: left;
 border-bottom: 1px solid #ddd;
+background-color: lightgrey;
+}
+
+tr {
+  background-color: lightgrey;
 }
 
 th {
@@ -48,9 +62,10 @@ color: #007bff;
 color: #0056b3;
 }
 </style>
+
 <body>
 <!-- Add the Bootstrap navbar component -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-">
   <a class="navbar-brand" href="index.php">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
