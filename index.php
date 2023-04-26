@@ -43,9 +43,6 @@
   </nav>
 </div>
 
-<!-- <a type="button" href="flickr.php"
-class="btn btn-outline-dark btn-md">flickr temporary</a> -->
-
 <div class="row">
 <div class="col">
     <div class="container my-5" id="manchester-info-box">
