@@ -1,5 +1,4 @@
 <html>
-
 <title>Twin Cities Project: Manchester | Wuhan</title>
     <link rel="stylesheet" href="css/bootstrap.css"/>
   <!--The link tag tells the browser where to find the CSS file, which is specified in the href attribute, and the rel attribute indicates that it is a stylesheet. -->

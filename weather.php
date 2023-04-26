@@ -1,9 +1,17 @@
 <!doctype html>
 <!--This code begins with an HTML document that includes a stylesheet and a navigation bar with a link to the home page. The PHP script starts with an include statement that imports the config.php file, which contains the API key and URLs needed to access the OpenWeatherMap API.-->
-  
+<html>
 <link rel="stylesheet" href="css/bootstrap.css">
 
 <style>
+  body {
+      background-image: url("https://assets.editorial.aetnd.com/uploads/2015/02/topic-golden-gate-bridge-gettyimages-177770941.jpg");
+      object-fit: cover;
+      background-attachment: fixed;
+      background-color: rgba(0,0,0,0.1);
+      background-blend-mode: lighten;
+      overflow-x: hidden;
+    }
   table {
 border-collapse: collapse;
 width: 100%;
@@ -40,6 +48,7 @@ color: #007bff;
 color: #0056b3;
 }
 </style>
+<body>
 <!-- Add the Bootstrap navbar component -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="index.php">Home</a>
@@ -57,6 +66,7 @@ color: #0056b3;
     </ul>
   </div>
 </nav>
+
 <?php
 include 'config.php';
 function extractWeatherData($weather) {
@@ -182,3 +192,5 @@ echo $html;
 getWeatherData($urlManchesterForecast, "Manchester Forecast");
 getWeatherData($urlWuhanForecast, "Wuhan Forecast");
 ?>
+</body>
+</html>
