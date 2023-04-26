@@ -86,7 +86,7 @@
 <div class="row" style="margin-bottom: 30px;">
 <div class="card mx-auto" style="width: 18rem;"> 
   <div class="card bg-dark text-white">
-    <img src="https://www.orphanednation.com/wp-content/uploads/2018/12/DSC_8830-1024x678-1024x678.jpg" alt="wuhan-tower">
+    <img src="https://vncarrentals.com/wp-content/uploads/2022/09/Discover-Landmark-81.jpeg" alt="wuhan-tower" style="height: 400px">
     <div class="card-body">
       <h5 class="card-title">Landmarks</h5>
       <p class="card-text">Click button below to view information about each landmark on each map</p>
@@ -97,7 +97,7 @@
 
   <div class="card mx-auto" style="width: 18rem;"> 
   <div class="card bg-dark text-white">
-    <img src="https://www.orphanednation.com/wp-content/uploads/2018/12/DSC_8830-1024x678-1024x678.jpg" alt="wuhan-tower">
+    <img src="https://www.super8independence.com/gallery-images/properties/5/9/4/1561193628_weather1_2.jpg" alt="wuhan-tower" style="height: 400px">
     <div class="card-body">
       <h5 class="card-title">Weather</h5>
       <p class="card-text">Click button below to view weather details for both Manchester and Wuhan.</p>
