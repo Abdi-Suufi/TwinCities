@@ -188,7 +188,6 @@ function getWeatherData($url, $cityName) {
 echo $html;
 }
 
-
 getWeatherData($urlManchesterForecast, "Manchester Forecast");
 getWeatherData($urlWuhanForecast, "Wuhan Forecast");
 ?>
