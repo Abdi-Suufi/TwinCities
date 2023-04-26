@@ -1,14 +1,15 @@
 <?php
-// Connect to the database
-$host = '127.0.0.1';
-$dbname = 'mySQL';
-$username = 'root';
-$password = 'password';
+// Connect to the database using PDO
+$servername = "localhost";
+$username = "yourusername";
+$password = "yourpassword";
+$dbname = "yourdatabase";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
 }
 
 // Retrieve data for Manchester and Wuhan
@@ -18,7 +19,7 @@ $sql = "SELECT cities.name as city, landmarks.name as landmark, landmarks.descri
         WHERE cities.name IN ('Manchester', 'Wuhan')
         ORDER BY landmarks.date_added DESC
         LIMIT 10";
-$result = mysqli_query($conn, $sql);
+$result = $conn->query($sql);
 
 // Format the data into an RSS feed
 header("Content-Type: application/rss+xml; charset=ISO-8859-1");
@@ -30,7 +31,7 @@ echo '<?xml version="1.0" encoding="ISO-8859-1" ?>
 <link>http://www.example.com</link>
 <description>A list of cities and their landmarks</description>';
 
-while($row = mysqli_fetch_assoc($result)) {
+while($row = $result->fetch(PDO::FETCH_ASSOC)) {
     $city = $row['city'];
     $landmark = $row['landmark'];
     $description = $row['description'];
@@ -49,6 +50,5 @@ while($row = mysqli_fetch_assoc($result)) {
 echo '</channel>
 </rss>';
 
-mysqli_close($conn);
+$conn = null;
 ?>
-
