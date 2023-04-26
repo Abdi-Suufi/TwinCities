@@ -20,7 +20,8 @@ class landmarksTest extends \PHPUnit\Framework\TestCase
         $this->assertInstanceOf(PDO::class, $pdo);
     }
 
-    public function testInvalidConnection() {
+    public function testInvalidConnection()
+    {
         $this->expectException(PDOException::class);
         $pdo = new PDO("mysql:host=$this->host;dbname=$this->dbname", $this->username, 'temp');
     }
@@ -33,5 +34,12 @@ class landmarksTest extends \PHPUnit\Framework\TestCase
         $this->assertNotEmpty($stmt);
     }
 
+    public function testGetLandmarkDataReturnsAllDataWithNoParameter()
+    {
+        $pdo = new PDO("mysql:host=$this->host;dbname=$this->dbname", $this->username, $this->password);
+        $stmt = getLandmarkData($pdo, null);
+        $rowCount = $stmt->rowCount();
+        $this->assertGreaterThan(0, $rowCount);
+    }
 
 }

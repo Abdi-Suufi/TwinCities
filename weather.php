@@ -2,67 +2,7 @@
 <!--This code begins with an HTML document that includes a stylesheet and a navigation bar with a link to the home page. The PHP script starts with an include statement that imports the config.php file, which contains the API key and URLs needed to access the OpenWeatherMap API.-->
 <html>
 <link rel="stylesheet" href="css/bootstrap.css">
-
-<style>
-  body {
-      background-image: url("https://assets.editorial.aetnd.com/uploads/2015/02/topic-golden-gate-bridge-gettyimages-177770941.jpg");
-      object-fit: cover;
-      background-attachment: fixed;
-      background-color: rgba(0,0,0,0.1);
-      background-blend-mode: lighten;
-      overflow-x: hidden;
-    }
-  table {
-border-collapse: collapse;
-width: 100%;
-}
-
-body {
-      background-image: url("https://assets.editorial.aetnd.com/uploads/2015/02/topic-golden-gate-bridge-gettyimages-177770941.jpg");
-      object-fit: cover;
-      background-attachment: fixed;
-      background-color: rgba(0,0,0,0.1);
-      background-blend-mode: lighten;
-      overflow-x: hidden;
-    }
-
-th, td {
-padding: 8px;
-text-align: left;
-border-bottom: 1px solid #ddd;
-background-color: lightgrey;
-}
-
-tr {
-  background-color: lightgrey;
-}
-
-th {
-background-color: #f2f2f2;
-color: #333;
-}
-
-h1 {
-font-size: 24px;
-}
-
-p {
-margin: 0 0 8px;
-}
-
-.navbar {
-margin-bottom: 32px;
-}
-
-.nav-link {
-color: #007bff;
-}
-
-.nav-link:hover {
-color: #0056b3;
-}
-</style>
-
+<link rel="stylesheet" href="styles.css">
 <body>
 <!-- Add the Bootstrap navbar component -->
 <nav class="navbar navbar-expand-lg navbar-light bg-">
@@ -202,7 +142,6 @@ function getWeatherData($url, $cityName) {
 
 echo $html;
 }
-
 
 getWeatherData($urlManchesterForecast, "Manchester Forecast");
 getWeatherData($urlWuhanForecast, "Wuhan Forecast");

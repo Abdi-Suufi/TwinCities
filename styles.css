@@ -1,0 +1,141 @@
+body {
+    background-image: url("https://assets.editorial.aetnd.com/uploads/2015/02/topic-golden-gate-bridge-gettyimages-177770941.jpg");
+    object-fit: cover;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-blend-mode: lighten;
+    overflow-x: hidden;
+}
+
+#myCarousel {
+    width: 500px;
+    height: 300px;
+}
+
+h1 {
+    color: white;
+}
+
+nav {
+    margin-bottom: 10px;
+    top: 0;
+    position: fixed;
+}
+
+.btn {
+    margin: 4px;
+}
+
+#manchesterMap {
+    /* setting the margin of 0 auto, width of 500px and height of 300px of the Manchester map and along side with a 1px solid gray border */
+    margin: 0 auto;
+    width: 500px;
+    height: 300px;
+    transition: 0.2s;
+    top: 10px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+        0 2px 2px rgba(0, 0, 0, 0.11),
+        0 4px 4px rgba(0, 0, 0, 0.11),
+        0 8px 8px rgba(0, 0, 0, 0.11),
+        0 16px 16px rgba(0, 0, 0, 0.11),
+        0 32px 32px rgba(0, 0, 0, 0.11);
+}
+
+#manchesterMap:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+#wuhanMap {
+    /* setting the margin of 0 auto, width of 500px and height of 300px of the Wuhan map and along side with a 1px solid gray border */
+    margin: 0 auto;
+    width: 500px;
+    height: 300px;
+    transition: 0.2s;
+    top: 10px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+        0 2px 2px rgba(0, 0, 0, 0.11),
+        0 4px 4px rgba(0, 0, 0, 0.11),
+        0 8px 8px rgba(0, 0, 0, 0.11),
+        0 16px 16px rgba(0, 0, 0, 0.11),
+        0 32px 32px rgba(0, 0, 0, 0.11);
+}
+
+#wuhanMap:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+#wuhan-weather-box {
+    border: 3px solid black;
+    margin: 4px;
+}
+
+#manchester-description-box {
+    margin-left: 4px;
+    background-color: white;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+        0 2px 2px rgba(0, 0, 0, 0.11),
+        0 4px 4px rgba(0, 0, 0, 0.11),
+        0 8px 8px rgba(0, 0, 0, 0.11),
+        0 16px 16px rgba(0, 0, 0, 0.11),
+        0 32px 32px rgba(0, 0, 0, 0.11);
+}
+
+#wuhan-description-box {
+    margin-left: 4px;
+    background-color: white;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+        0 2px 2px rgba(0, 0, 0, 0.11),
+        0 4px 4px rgba(0, 0, 0, 0.11),
+        0 8px 8px rgba(0, 0, 0, 0.11),
+        0 16px 16px rgba(0, 0, 0, 0.11),
+        0 32px 32px rgba(0, 0, 0, 0.11);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background-color: lightgrey;
+}
+
+tr {
+    background-color: lightgrey;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+p {
+    margin: 0 0 8px;
+}
+
+.navbar {
+    margin-bottom: 32px;
+}
+
+.nav-link {
+    color: #007bff;
+}
+
+.nav-link:hover {
+    color: #0056b3;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
