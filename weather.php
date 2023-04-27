@@ -21,7 +21,7 @@
     </ul>
   </div>
 </nav>
-
+<!--This is a PHP function called extractWeatherData() that takes a parameter $weather, which is an object containing data about the weather. The function extracts specific pieces of data from the $weather object, such as temperature, description, icon, feels like temperature, humidity, and wind speed, and returns them as an associative array.-->
 <?php
 include 'config.php';
 function extractWeatherData($weather) {
@@ -40,6 +40,8 @@ function extractWeatherData($weather) {
     'windSpeed' => $windSpeed,
   ];
 }
+//This is a PHP function called displayWeatherData() that takes two parameters: $urlManchester and $urlWuhan, which are URLs to retrieve weather data for Manchester and Wuhan respectively. The function retrieves the weather data using file_get_contents() and then decodes the data using json_decode(). It then calls the extractWeatherData() function to extract specific pieces of weather data and stores them in separate variables for Manchester and Wuhan.
+
 
 function displayWeatherData($urlManchester, $urlWuhan) {
   $dataManchester = file_get_contents($urlManchester);
