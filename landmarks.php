@@ -1,3 +1,4 @@
+//the layout and styling of a webpage displaying information about landmarks, using the Bootstrap framework for styling. The PHP function getLandmarkData() is also defined, which queries a database using PDO (PHP Data Objects) to retrieve information about a specific landmark if its name is provided as a parameter, or all landmarks if no name is provided.
 
 <!DOCTYPE html>
 <html>
@@ -42,7 +43,7 @@ function getLandmarkData($pdo, $landmarkName) {
     }
     return $stmt;
 }
-
+//This is a block of PHP code that defines the function getFlickrPhotoUrl() which takes a parameter landmark_tag and returns a URL for a Flickr photo associated with that landmark tag.
 function getFlickrPhotoUrl($landmark_tag) {
     $flickrApiKey = '3cb96aaa4b49a42b1f147d5bfcf4d9e2';
     $url_base = 'https://api.flickr.com/services/rest/?method=flickr.photos.search';
@@ -58,7 +59,7 @@ function getFlickrPhotoUrl($landmark_tag) {
     $photo_url = 'https://live.staticflickr.com/' . $photo['server'] . '/' . $photo['id'] . '_' . $photo['secret'] . '.jpg';
     return $photo_url;
 }
-
+//The following is a PHP code block that defines the displayLandmarkCard() function. This function accepts two parameters: $row, which is an associative array that contains information about a landmark, and $photo_url, which is a string representing the URL of an associated photo for the landmark.
 function displayLandmarkCard($row, $photo_url) {
   $photo = array('title' => ''); // Assign a default value to the $photo variable
   echo '<div class="card mb-3">';
@@ -72,7 +73,7 @@ function displayLandmarkCard($row, $photo_url) {
   echo '<p class="card-text"><b>Style:</b> ' . $row['style'] . '</p>';
   echo '</div></div>';
 }
-
+//This PHP code creates a navigation bar and displays information about a landmark. It gets the landmark name from the URL parameters and connects to the database using the connect.php file. Then it retrieves the landmark information from the database using the getLandmarkData() function. If the query returns any results, it calls getFlickrPhotoUrl() to get the URL of a photo associated with the landmark and calls displayLandmarkCard() to show a styled card containing the landmark details and photo. The styling uses Bootstrap classes.
 ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="index.php">Home</a>
