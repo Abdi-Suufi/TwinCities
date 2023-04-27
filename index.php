@@ -48,7 +48,7 @@
     <div class="container my-5" id="manchester-info-box">
         <div class="row justify-content-center">
           <div class="center">
-            <h1> Manchester</h1>
+            <h2> Manchester</h2>
             <!--HTML header tag that displays a level one heading on the web page. The text "Manchester" is wrapped in the h1 tags, which denote the largest and most important heading level in HTML. -->
             </div>
             <div  id="manchester-description-box">
@@ -68,7 +68,7 @@
     <div class="container my-5" id="wuhan-info-box">
         <div class="row justify-content-center">
           <div class="center">
-            <h1> Wuhan</h1>
+            <h2> Wuhan</h2>
             <!--HTML header tag that displays a level one heading on the web page. The text "Manchester" is wrapped in the h1 tags, which denote the largest and most important heading level in HTML. -->
             </div>
             <div  id="wuhan-description-box">
@@ -95,9 +95,20 @@
   </div>
 </div>
 
+<div class="card mx-auto" style="width: 18rem;"> 
+  <div class="card bg-dark text-white">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Feed-icon.svg/1200px-Feed-icon.svg.png" alt="RSS" style="height: 400px">
+    <div class="card-body">
+      <h5 class="card-title">RSS Feed</h5>
+      <p class="card-text">Click button below to view RSS feed for information on landmarks</p>
+      <a href="rss.php" class="btn btn-outline-light">RSS Feed</a>
+    </div>
+  </div>
+</div>
+
   <div class="card mx-auto" style="width: 18rem;"> 
   <div class="card bg-dark text-white">
-    <img src="https://www.super8independence.com/gallery-images/properties/5/9/4/1561193628_weather1_2.jpg" alt="wuhan-tower" style="height: 400px">
+    <img src="https://www.super8independence.com/gallery-images/properties/5/9/4/1561193628_weather1_2.jpg" alt="Weather" style="height: 400px">
     <div class="card-body">
       <h5 class="card-title">Weather</h5>
       <p class="card-text">Click button below to view weather details for both Manchester and Wuhan.</p>

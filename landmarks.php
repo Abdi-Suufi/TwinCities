@@ -1,36 +1,10 @@
-//This is the start of an HTML file that includes a header with meta information and a title, links to a Bootstrap stylesheet for styling, and some additional CSS styles for the page. It also includes a class called "flickrimg" for styling images. The body tag is opened to indicate the start of the visible content of the web page.
-
 <!DOCTYPE html>
 <html>
-<head>
+<!--This is the start of an HTML file that includes a header with meta information and a title, links to a Bootstrap stylesheet for styling, and some additional CSS styles for the page. It also includes a class called "flickrimg" for styling images. The body tag is opened to indicate the start of the visible content of the web page.-->
 <meta charset="utf-8">
 <title>Landmarks</title>
 <link rel="stylesheet" href="css/bootstrap.css">
-<style>
-h1 {
-font-size: 36px;
-font-weight: bold;
-text-align: center;
-}
-h2 {
-font-size: 24px;
-text-align: center;
-}
-p {
-font-size: 18px;
-line-height: 1.5;
-margin: 20px 0;
-}
-b {
-font-size: 20px;
-font-weight: bold;
-}
-.flickrimg {
-margin: 20px auto;
-text-align: center;
-}
-</style>
-</head>
+<link rel="stylesheet" href="styles.css">
 <body>
 <?php
 function getLandmarkData($pdo, $landmarkName) {
@@ -70,26 +44,25 @@ function displayLandmarkCard($row, $photo_url) {
   echo '<p class="card-text">' . $row['description'] . '</p>';
   echo '<p class="card-text"><b>Year built:</b> ' . $row['year_built'] . '</p>';
   echo '<p class="card-text"><b>Architect:</b> ' . $row['architect'] . '</p>';
-  echo '<p class="card-text"><b>Style:</b> ' . $row['style'] . '</p>';
   echo '</div></div>';
 }
 //This PHP code creates a navigation bar and displays information about a landmark. It gets the landmark name from the URL parameters and connects to the database using the connect.php file. Then it retrieves the landmark information from the database using the getLandmarkData() function. If the query returns any results, it calls getFlickrPhotoUrl() to get the URL of a photo associated with the landmark and calls displayLandmarkCard() to show a styled card containing the landmark details and photo. The styling uses Bootstrap classes.
 ?>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-">
   <a class="navbar-brand" href="index.php">Home</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="weather.php">Weather</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Landmarks.php">Landmarks</a>
-        </li>
-      </ul>
-    <div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="weather.php">Weather</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Landmarks.php">Landmarks</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 <div class="container">
 <div class="row">

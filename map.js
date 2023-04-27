@@ -52,8 +52,13 @@ function initMap() {
       position: { lat, lng },
       map: map,
       title: title,
-      animation: google.maps.Animation.DROP
+      animation: google.maps.Animation.DROP,
+      icon: {
+        url: img,
+        alt: title
+      }
     });
+
 //The URL is constructed using a template literal that includes a path to a PHP file landmarks.php, and a query string parameter name whose value is the encoded content of a variable content
 //The PHP file landmarks.php is likely responsible for rendering the HTML for the page that displays information about the selected landmark
     google.maps.event.addListener(marker, "click", function () {
