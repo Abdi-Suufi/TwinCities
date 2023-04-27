@@ -1,4 +1,4 @@
-//the layout and styling of a webpage displaying information about landmarks, using the Bootstrap framework for styling. The PHP function getLandmarkData() is also defined, which queries a database using PDO (PHP Data Objects) to retrieve information about a specific landmark if its name is provided as a parameter, or all landmarks if no name is provided.
+<!the layout and styling of a webpage displaying information about landmarks, using the Bootstrap framework for styling. The PHP function getLandmarkData() is also defined, which queries a database using PDO (PHP Data Objects) to retrieve information about a specific landmark if its name is provided as a parameter, or all landmarks if no name is provided.!>
 
 <!DOCTYPE html>
 <html>
