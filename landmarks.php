@@ -1,4 +1,5 @@
 //This is the start of an HTML file that includes a header with meta information and a title, links to a Bootstrap stylesheet for styling, and some additional CSS styles for the page. It also includes a class called "flickrimg" for styling images. The body tag is opened to indicate the start of the visible content of the web page.
+
 <!DOCTYPE html>
 <html>
 <head>
